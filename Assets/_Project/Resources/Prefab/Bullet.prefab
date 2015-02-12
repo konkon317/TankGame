@@ -14,8 +14,8 @@ GameObject:
   - 54: {fileID: 5459684}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_TagString: Bullet
+  m_Icon: {fileID: 1177953632, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -65,7 +65,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 196070}
   serializedVersion: 2
-  m_Mass: 10
+  m_Mass: .100000001
   m_Drag: 0
   m_AngularDrag: .0500000007
   m_UseGravity: 1

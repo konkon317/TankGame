@@ -41,7 +41,7 @@ public class TankMuzzle : MonoBehaviour
 		obj.transform.localScale = new Vector3(defaultScale.x * tankScale.x, defaultScale.y * tankScale.y, defaultScale.z * tankScale.z);
 
 		//力をかけて弾を飛ばす
-		obj.rigidbody.AddForce(transform.forward *1500*obj.rigidbody.mass);
+        obj.rigidbody.AddForce(transform.forward *2000*obj.rigidbody.mass);
 	
 		//弾の親オブジェクトを設定
 		//（ヒエラルキービューを見やすくするために）

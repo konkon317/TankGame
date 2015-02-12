@@ -6,11 +6,13 @@ public class TankMuzzle : MonoBehaviour
 
 	GameObject bulletPrefab;
 	Transform bulletsParent;
+	Tank tank;
 
 	void Awake()
 	{
 		bulletPrefab = Resources.Load<GameObject>(ResourcesPath.Prefab_Bullet);
 		bulletsParent = GameObject.FindWithTag(Tags.BulletsParent).transform;
+		tank = this.GetComponentInParent<Tank>();
 	}
 
 	// Use this for initialization
@@ -34,12 +36,12 @@ public class TankMuzzle : MonoBehaviour
 		obj.transform.Rotate(transform.rotation.eulerAngles);	//弾の向きを設定
 		
 		//大きさの設定
-		Vector3 tankScale = this.transform.localScale;
+		Vector3 tankScale = tank.transform.localScale;
 		Vector3 defaultScale = obj.transform.localScale;
 		obj.transform.localScale = new Vector3(defaultScale.x * tankScale.x, defaultScale.y * tankScale.y, defaultScale.z * tankScale.z);
 
 		//力をかけて弾を飛ばす
-		obj.rigidbody.AddForce(transform.forward * 800*obj.rigidbody.mass);
+		obj.rigidbody.AddForce(transform.forward *1500*obj.rigidbody.mass);
 	
 		//弾の親オブジェクトを設定
 		//（ヒエラルキービューを見やすくするために）

@@ -52,7 +52,8 @@ public class WallCreater : MonoBehaviour
 				}
 
 				GameObject obj = (GameObject)Instantiate(prefab);
-				obj.transform.position = this.transform.position + (new Vector3(0, i, 0));
+				Vector3 Scale = prefab.transform.lossyScale;
+				obj.transform.position = this.transform.position + (new Vector3(0, i*Scale.y+(Scale.y/2), 0));
 
 				obj.transform.parent = transform;
 			}

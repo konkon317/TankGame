@@ -325,7 +325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6125c418abf545dea75df9db4cbab8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DetonatorPrefab: {fileID: 100000, guid: 8e02e06584f51ab42986fd44c73d976e, type: 2}
+  DetonatorPrefab: {fileID: 125572, guid: 31ce2f07d78dedc4c8bbfdd2f4088c1e, type: 2}
 --- !u!114 &11437546
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -15,7 +15,7 @@ GameObject:
   - 114: {fileID: 11456806}
   m_Layer: 0
   m_Name: WallBlcokCube
-  m_TagString: Untagged
+  m_TagString: WallBlockCube
   m_Icon: {fileID: 813524716, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35,7 +35,7 @@ GameObject:
   - 114: {fileID: 11429036}
   m_Layer: 0
   m_Name: WallBlcokCube
-  m_TagString: Untagged
+  m_TagString: WallBlockCube
   m_Icon: {fileID: 813524716, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55,7 +55,7 @@ GameObject:
   - 114: {fileID: 11480180}
   m_Layer: 0
   m_Name: WallBlcokCube
-  m_TagString: Untagged
+  m_TagString: WallBlockCube
   m_Icon: {fileID: 813524716, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

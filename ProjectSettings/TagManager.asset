@@ -6,6 +6,11 @@ TagManager:
   - TankMuzzle
   - Bullets
   - Bullet
+  - Tank
+  - Ground
+  - WallBlockCube
+  - WallBlcokCubeWeak
+  - 
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

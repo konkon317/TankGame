@@ -7,8 +7,9 @@ public class Bullet : MonoBehaviour
     GameObject detonatorPrefab;
 
 	// Use this for initialization
-	void Start () {
-	
+	void Start () 
+    {
+        Destroy(this.gameObject, 10f);	
 	}
 	
 	// Update is called once per frame

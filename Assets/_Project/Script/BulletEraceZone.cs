@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EraceZone : MonoBehaviour {
+public class BulletEraceZone : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {

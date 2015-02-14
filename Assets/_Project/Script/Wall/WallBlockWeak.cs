@@ -22,9 +22,12 @@ public class WallBlockWeak : MonoBehaviour {
 
         WallParent parent = GetComponentInParent<WallParent>();
         parent.DisableKinematicsAllBlock();
+		parent.Crashed = true ;
 
-        GameObject detornator = (GameObject)Instantiate(DetonatorPrefab);
-        detornator.transform.position = this.transform.position;
+        GameObject detonator = (GameObject)Instantiate(DetonatorPrefab);
+        detonator.transform.position = this.transform.position;
+
+		detonator.transform.parent = GameObject.FindWithTag(Tags.DetonatorParent).transform;
 
         Destroy(parent.gameObject, 5f);
     }

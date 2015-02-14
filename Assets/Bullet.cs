@@ -9,7 +9,7 @@ public class Bullet : MonoBehaviour
 	// Use this for initialization
 	void Start () 
     {
-        Destroy(this.gameObject, 10f);	
+        Destroy(this.gameObject, 5f);	
 	}
 	
 	// Update is called once per frame
@@ -25,6 +25,8 @@ public class Bullet : MonoBehaviour
         {
             GameObject obj = (GameObject)Instantiate(detonatorPrefab);
             obj.transform.position = this.transform.position;
+
+			obj.transform.parent = GameObject.FindWithTag(Tags.DetonatorParent).transform;
 
             Destroy(this.gameObject);
 

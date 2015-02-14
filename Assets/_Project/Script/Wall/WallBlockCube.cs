@@ -13,8 +13,8 @@ public class WallBlockCube : MonoBehaviour {
     {
         if (rigidbody.velocity.magnitude>1)
         {
-            Collider collider = GetComponent<Collider>();
-            collider.enabled = false;
+           // Collider collider = GetComponent<Collider>();
+           // collider.enabled = false;
         }
 	}
 }

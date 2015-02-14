@@ -10,5 +10,5 @@ public class Tags : MonoBehaviour
     public const string Ground="Ground";
     public const string WallBlockCube="WallBlockCube";
     public const string WallBlockCubeWeak="WallBlockCubeWeak";
-	
+	public const string DetonatorParent = "DetonatorParent";
 }

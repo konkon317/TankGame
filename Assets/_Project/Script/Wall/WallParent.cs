@@ -9,6 +9,9 @@ public class WallParent : MonoBehaviour
 	GameObject WallBlcok_Prefab;
 	GameObject WallBlockWeak_Prefab;
 
+	public bool Crashed = false;
+	int counter = 0;
+
   
 
 	bool isCreated = false;
@@ -28,6 +31,15 @@ public class WallParent : MonoBehaviour
 	
 	void Update () 
 	{
+		if (Crashed)
+		{
+			
+			if (counter == 2)
+			{
+				DisableColliderAllBlock();
+			}
+			counter++;
+		}
 	
 	}
 
@@ -72,4 +84,13 @@ public class WallParent : MonoBehaviour
         }
 
     }
+
+	public void DisableColliderAllBlock()
+	{
+		Collider[] colliders = GetComponentsInChildren<Collider>();
+		foreach (Collider c in colliders)
+		{
+			c.enabled = false;
+		}
+	}
 }

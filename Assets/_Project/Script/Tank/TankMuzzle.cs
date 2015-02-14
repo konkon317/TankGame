@@ -8,6 +8,8 @@ public class TankMuzzle : MonoBehaviour
 	Transform bulletsParent;
 	Tank tank;
 
+	float point;
+
 	void Awake()
 	{
 		bulletPrefab = Resources.Load<GameObject>(ResourcesPath.Prefab_Bullet);
@@ -21,9 +23,13 @@ public class TankMuzzle : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
 	
 	}
+
+	
+
 
 	/// <summary>
 	/// 発砲します

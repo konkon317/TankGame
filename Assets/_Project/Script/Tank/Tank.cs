@@ -38,9 +38,9 @@ public class Tank : MonoBehaviour
 
 	void Update()
 	{
-		//ChangeAngele();
-		barrelSupport.ChangeAngle(burrelAngleSlider.sliderValue);
-		//barrelSupport.ChangeAngle(barrelAngle);
+		ChangeAngele();
+		//barrelSupport.ChangeAngle(burrelAngleSlider.sliderValue);
+		barrelSupport.ChangeAngle(barrelAngle);
 
         rigidbody.AddForce(new Vector3(2f, 0f, 0f)  *rigidbody.mass,ForceMode.Impulse);
         if (rigidbody.velocity.magnitude > MaxVelocity.magnitude)

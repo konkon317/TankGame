@@ -1,0 +1,153 @@
+fileFormatVersion: 2
+guid: a2af605a41175fc46afe94364f4530b7
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Box004
+    100002: Box007
+    100004: Cylinder001
+    100006: Cylinder010
+    100008: Object001
+    100010: Object003
+    100012: Particle View 001
+    100014: //RootNode
+    100016: Tube001
+    100018: Tube002
+    100020: wheel1
+    100022: wheel10
+    100024: wheel11
+    100026: wheel12
+    100028: wheel2
+    100030: wheel3
+    100032: wheel4
+    100034: wheel5
+    100036: wheel6
+    100038: wheel7
+    100040: wheel8
+    100042: wheel9
+    400000: Box004
+    400002: Box007
+    400004: Cylinder001
+    400006: Cylinder010
+    400008: Object001
+    400010: Object003
+    400012: Particle View 001
+    400014: //RootNode
+    400016: Tube001
+    400018: Tube002
+    400020: wheel1
+    400022: wheel10
+    400024: wheel11
+    400026: wheel12
+    400028: wheel2
+    400030: wheel3
+    400032: wheel4
+    400034: wheel5
+    400036: wheel6
+    400038: wheel7
+    400040: wheel8
+    400042: wheel9
+    2300000: Box007
+    2300002: Object001
+    2300004: Tube001
+    2300006: Tube002
+    2300008: wheel1
+    2300010: wheel10
+    2300012: wheel11
+    2300014: wheel12
+    2300016: wheel2
+    2300018: wheel3
+    2300020: wheel4
+    2300022: wheel5
+    2300024: wheel6
+    2300026: wheel7
+    2300028: wheel8
+    2300030: wheel9
+    3300000: Box007
+    3300002: Object001
+    3300004: Tube001
+    3300006: Tube002
+    3300008: wheel1
+    3300010: wheel10
+    3300012: wheel11
+    3300014: wheel12
+    3300016: wheel2
+    3300018: wheel3
+    3300020: wheel4
+    3300022: wheel5
+    3300024: wheel6
+    3300026: wheel7
+    3300028: wheel8
+    3300030: wheel9
+    4300000: Object001
+    4300002: Tube001
+    4300004: Tube002
+    4300006: Box007
+    4300008: wheel1
+    4300010: wheel2
+    4300012: wheel3
+    4300014: wheel4
+    4300016: wheel5
+    4300018: wheel6
+    4300020: wheel7
+    4300022: wheel8
+    4300024: wheel9
+    4300026: wheel10
+    4300028: wheel11
+    4300030: wheel12
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

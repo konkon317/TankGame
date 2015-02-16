@@ -44,7 +44,7 @@ public class TankMuzzle : MonoBehaviour
 		//大きさの設定
 		Vector3 tankScale = tank.transform.localScale;
 		Vector3 defaultScale = obj.transform.localScale;
-		obj.transform.localScale = new Vector3(defaultScale.x * tankScale.x, defaultScale.y * tankScale.y, defaultScale.z * tankScale.z);
+		//obj.transform.localScale = new Vector3(defaultScale.x * tankScale.x, defaultScale.y * tankScale.y, defaultScale.z * tankScale.z);
 
 		//力をかけて弾を飛ばす
         obj.rigidbody.AddForce(transform.forward *2000*obj.rigidbody.mass);

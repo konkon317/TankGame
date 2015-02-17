@@ -3,7 +3,9 @@ using System.Collections;
 
 public class Tank : MonoBehaviour 
 {
-	
+
+	[SerializeField]
+	GameObject crashEfect;
 
 	[SerializeField]
 	NGUIButton buttonFire;
@@ -21,6 +23,14 @@ public class Tank : MonoBehaviour
 
 	float barrelAngle;
 
+
+	/// <summary>
+	/// 戦車が壊れているか(ゲームオーバーの条件)
+	/// </summary>
+	public bool IsCrashed { get { return isCrashed; } }
+	bool isCrashed;
+
+
 	void Awake()
 	{
 		muzzle = GetComponentInChildren<TankMuzzle>();
@@ -33,24 +43,29 @@ public class Tank : MonoBehaviour
 
 	void Start()
 	{
-       
+		crashEfect.SetActive(false);
+		isCrashed = false;
 	}
 
 	void Update()
 	{
-		ChangeAngele();
-		//barrelSupport.ChangeAngle(burrelAngleSlider.sliderValue);
-		barrelSupport.ChangeAngle(barrelAngle);
-
-        rigidbody.AddForce(new Vector3(2f, 0f, 0f)  *rigidbody.mass,ForceMode.Impulse);
-        if (rigidbody.velocity.magnitude > MaxVelocity.magnitude)
-        {
-            rigidbody.velocity = MaxVelocity;
-        }
-
-		if (Input.GetKeyDown(KeyCode.Return))
+		if (!IsCrashed)
 		{
-			muzzle.Fire();
+
+			rigidbody.AddForce(new Vector3(2f, 0f, 0f) * rigidbody.mass, ForceMode.Impulse);
+			if (rigidbody.velocity.magnitude > MaxVelocity.magnitude)
+			{
+				rigidbody.velocity = MaxVelocity;
+			}
+
+			ChangeAngele();
+			//barrelSupport.ChangeAngle(burrelAngleSlider.sliderValue);
+			barrelSupport.ChangeAngle(barrelAngle);
+
+			if (Input.GetKeyDown(KeyCode.Return))
+			{
+				muzzle.Fire();
+			}
 		}
 	}
 
@@ -62,7 +77,23 @@ public class Tank : MonoBehaviour
 		if (barrelAngle > 1) barrelAngle = 1;
 		if (barrelAngle < 0) barrelAngle = 0;
 	}
-	
-	
 
+
+	void OnCollisionEnter(Collision collision)
+	{
+		string tag = collision.collider.tag;
+
+		if (tag == Tags.WallBlockCube || tag == Tags.WallBlockCubeWeak)
+		{
+			Crash();
+			
+		}
+	}
+
+	void Crash()
+	{
+		isCrashed = true;
+		rigidbody.velocity = Vector3.zero;
+		crashEfect.SetActive(true);
+	}
 }

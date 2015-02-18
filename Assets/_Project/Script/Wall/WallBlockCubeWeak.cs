@@ -4,8 +4,12 @@ using System.Collections;
 public class WallBlockCubeWeak : MonoBehaviour {
 
 	// Use this for initialization
-	void Start () {
-	
+	void Start () 
+	{
+		if (DebugManager.FunctionLog)
+		{
+			Debug.Log(this.ToString() + " Start");
+		}
 	}
 	
 	// Update is called once per frame

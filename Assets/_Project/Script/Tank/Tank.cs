@@ -23,6 +23,8 @@ public class Tank : MonoBehaviour
 
 	float barrelAngle;
 
+	GameController gameController;
+
 
 	/// <summary>
 	/// 戦車が壊れているか(ゲームオーバーの条件)
@@ -33,6 +35,13 @@ public class Tank : MonoBehaviour
 
 	void Awake()
 	{
+		gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
+	
+		if (DebugManager.FunctionLog)
+		{
+			Debug.Log(this.ToString() + " Awake");
+		}
+
 		muzzle = GetComponentInChildren<TankMuzzle>();
 		barrelSupport = GetComponentInChildren<TankBarrelSupport>();
 		buttonFire.SetDelegate_OnPressFunction(muzzle.Fire);
@@ -43,13 +52,18 @@ public class Tank : MonoBehaviour
 
 	void Start()
 	{
+		if (DebugManager.FunctionLog)
+		{
+			Debug.Log(this.ToString() + " Start");
+		}
+
 		crashEfect.SetActive(false);
 		isCrashed = false;
 	}
 
 	void Update()
 	{
-		if (!IsCrashed)
+		if (gameController.Sequence==GameController.GameSequence.Playing)
 		{
 
 			rigidbody.AddForce(new Vector3(2f, 0f, 0f) * rigidbody.mass, ForceMode.Impulse);
@@ -85,8 +99,10 @@ public class Tank : MonoBehaviour
 
 		if (tag == Tags.WallBlockCube || tag == Tags.WallBlockCubeWeak)
 		{
-			Crash();
-			
+			if (!IsCrashed)
+			{
+				Crash();
+			}
 		}
 	}
 
@@ -95,5 +111,7 @@ public class Tank : MonoBehaviour
 		isCrashed = true;
 		rigidbody.velocity = Vector3.zero;
 		crashEfect.SetActive(true);
+
+		
 	}
 }

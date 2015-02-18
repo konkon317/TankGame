@@ -11,7 +11,7 @@ public class NGUIButton : MonoBehaviour
 
 	public bool isHolding;	//ボタンが押され、離されるまでの間"true"を保持します
 
-	public delegate void FuncDelegate();	//この型名の変数に実行するべき関数を設定します
+	//public delegate void FuncDelegate();	//この型名の変数に実行するべき関数を設定します
 
 	FuncDelegate OnClickFunction			=null;	//ボタンがクリックされ離された時に実行する
 	FuncDelegate OnHoldingFunction_Update 	=null;	//ボタンが押されている間毎フレーム"Update"内で実行する
@@ -38,44 +38,59 @@ public class NGUIButton : MonoBehaviour
 	//----------------------------------------
 	void Update () 
 	{
-		if (OnHoldingFunction_Update != null) 
+		if (this.enabled)
 		{
-			if(isHolding)
+			if (OnHoldingFunction_Update != null)
 			{
-				OnHoldingFunction_Update();
+				if (isHolding)
+				{
+					OnHoldingFunction_Update();
+				}
 			}
+
 		}
 	}
 	//----------------------------------------
 	void FixedUpdate()
 	{
-		if (OnHoldingFunction_FUpdate != null) 
+		if (this.enabled)
 		{
-			if(isHolding)
+			if (OnHoldingFunction_FUpdate != null)
 			{
-				OnHoldingFunction_FUpdate();
+				if (isHolding)
+				{
+					OnHoldingFunction_FUpdate();
+				}
 			}
 		}
 	}
 	//----------------------------------------
 	void LateUpdate()
 	{
-		if (OnHoldingFunction_LUpdate != null) 
+		if (this.enabled)
 		{
-			if(isHolding)
+			if (OnHoldingFunction_LUpdate != null)
 			{
-				OnHoldingFunction_LUpdate();
+				if (isHolding)
+				{
+					OnHoldingFunction_LUpdate();
+				}
 			}
 		}
 	}
 	//----------------------------------------
 	void OnClick()
 	{
-		if (OnClickFunction != null) 
+		if (this.enabled)
 		{
-			OnClickFunction();
+			if (this.enabled)
+			{
+				if (OnClickFunction != null)
+				{
+					OnClickFunction();
+				}
+			}
 		}
-
 	}
 	//----------------------------------------
 	void OnPress()
@@ -85,18 +100,21 @@ public class NGUIButton : MonoBehaviour
 
 		isHolding=!isHolding;
 
-		if (isHolding) 
+		if (this.enabled)
 		{
-			if(OnPressFunction != null)
+			if (isHolding)
 			{
-				OnPressFunction();
+				if (OnPressFunction != null)
+				{
+					OnPressFunction();
+				}
 			}
-		}
-		else 
-		{
-			if(OnReleaseFunction != null)
+			else
 			{
-				OnReleaseFunction();
+				if (OnReleaseFunction != null)
+				{
+					OnReleaseFunction();
+				}
 			}
 		}
 	}

@@ -4,7 +4,8 @@ using System.Collections;
 public class WallBlockCube : MonoBehaviour {
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 	
 	}
 	

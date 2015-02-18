@@ -10,13 +10,19 @@ public class TankBarrelSupport : MonoBehaviour
 
 	void Awake()
 	{
-
+		if (DebugManager.FunctionLog)
+		{
+			Debug.Log(this.ToString() + " Awake");
+		}
 	}
 
 	// Use this for initialization
 	void Start () 
 	{
-	
+		if (DebugManager.FunctionLog)
+		{
+			Debug.Log(this.ToString() + " Start");
+		}
 	}
 	
 	// Update is called once per frame

@@ -15,6 +15,11 @@ public class cameraMoveMent : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
+		if (DebugManager.FunctionLog)
+		{
+			Debug.Log(this.ToString() + " Start");
+		}
+
 		relPos = this.transform.position - targetObject.position;
 	}
 	

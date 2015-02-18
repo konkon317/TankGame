@@ -13,6 +13,11 @@ public class GroundMaker : MonoBehaviour {
 
     void Awake()
     {
+		if (DebugManager.FunctionLog)
+		{
+			Debug.Log(this.ToString() + " Awake");
+		}
+
         GroundPrefab = Resources.Load<GameObject>(ResourcesPath.Prefab_Ground);
 
     }
@@ -20,6 +25,10 @@ public class GroundMaker : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
     {
+		if (DebugManager.FunctionLog)
+		{
+			Debug.Log(this.ToString() + " Start");
+		}
 
         Initialize();
 	}

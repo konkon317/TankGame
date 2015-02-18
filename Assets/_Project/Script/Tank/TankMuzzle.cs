@@ -12,14 +12,23 @@ public class TankMuzzle : MonoBehaviour
 
 	void Awake()
 	{
+		if (DebugManager.FunctionLog)
+		{
+			Debug.Log(this.ToString() + " Awake");
+		}
+
 		bulletPrefab = Resources.Load<GameObject>(ResourcesPath.Prefab_Bullet);
 		bulletsParent = GameObject.FindWithTag(Tags.BulletsParent).transform;
 		tank = this.GetComponentInParent<Tank>();
 	}
 
 	// Use this for initialization
-	void Start () {
-	
+	void Start () 
+	{
+		if (DebugManager.FunctionLog)
+		{
+			Debug.Log(this.ToString() + " Start");
+		}
 	}
 	
 	// Update is called once per frame

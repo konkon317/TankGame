@@ -11,13 +11,16 @@ public class WallParent : MonoBehaviour
 
 	public bool Crashed = false;
 	int counter = 0;
-
-  
-
+	  
 	bool isCreated = false;
 
 	void Awake()
 	{
+		if (DebugManager.FunctionLog)
+		{
+			Debug.Log(this.ToString() + " Awake");
+		}
+
 		WallBlcok_Prefab = Resources.Load<GameObject>(ResourcesPath.Prefab_WallBlcok);
 		WallBlockWeak_Prefab = Resources.Load<GameObject>(ResourcesPath.Prefab_WallBlockWeak);
 	
@@ -26,18 +29,23 @@ public class WallParent : MonoBehaviour
 	
 	void Start () 
 	{
+		if (DebugManager.FunctionLog)
+		{
+			Debug.Log(this.ToString() + " Start");
+		}
+
 		Create();
 	}
 	
 	void Update () 
 	{
 		if (Crashed)
-		{
-			
+		{			
 			if (counter == 2)
 			{
 				DisableColliderAllBlock();
 			}
+
 			counter++;
 		}
 	

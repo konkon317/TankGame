@@ -23,6 +23,11 @@ public class WallMaker : MonoBehaviour
 
 	void Awake()
 	{
+		if (DebugManager.FunctionLog)
+		{
+			Debug.Log(this.ToString()+" Awake");
+		}
+
 		wallPrefab = Resources.Load<GameObject>(ResourcesPath.Prefab_Wall);
 		Initialize();
 	}
@@ -30,7 +35,10 @@ public class WallMaker : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		
+		if (DebugManager.FunctionLog)
+		{
+			Debug.Log(this.ToString() + " Start");
+		}
 	}
 	
 	// Update is called once per frame
@@ -61,6 +69,7 @@ public class WallMaker : MonoBehaviour
 	{
 		GameObject obj = (GameObject)Instantiate(wallPrefab);
 		obj.transform.position = createPosition;
+		obj.transform.parent = this.transform;
 		createPosition += new Vector3(interval, 0, 0);
 	}
 

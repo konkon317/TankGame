@@ -8,7 +8,10 @@ public class WallBlockWeak : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
     {
-	
+		if (DebugManager.FunctionLog)
+		{
+			Debug.Log(this.ToString() + " Start");
+		}
 	}
 	
 	// Update is called once per frame

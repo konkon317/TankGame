@@ -12,20 +12,39 @@ public class GameController : MonoBehaviour
 	public enum GameSequence
 	{ 
 		Title,
+		Restart,
 		Rady,
 		Playing,
 		GameOver,
 	}
 
 	
+	//状態が切り替わった際に実行する関数をリスト
 	FuncDelegateList setUpFunctions_Title=new FuncDelegateList();
+	FuncDelegateList setUpFunctions_Restart = new FuncDelegateList();
 	FuncDelegateList setUpFunctions_Rady=new FuncDelegateList();
 	FuncDelegateList setUpFunctions_Play=new FuncDelegateList();
 	FuncDelegateList setUpFunctions_GameOver=new FuncDelegateList();
 
-
+	/// <summary>
+	/// シーンのりロードの際リセットされない（されてはいけない）データ
+	/// </summary>
 	GameDataSingleton gameData;
-	
+
+	[SerializeField]
+	NGUIButton GameStartButton;
+	[SerializeField]
+	NGUIButton GoTitleButton;
+	[SerializeField]
+	NGUIButton RestartButton;
+
+	//各UIパネルのオンオフをサポートします
+	NGUIPanel titlePanel;
+	NGUIPanel radyPanel;
+	NGUIPanel playPanel;
+	NGUIPanel gameOverPanel;
+
+
 	/// <summary>
 	///ゲームの実行状態
 	/// </summary>
@@ -34,16 +53,22 @@ public class GameController : MonoBehaviour
 
 	void Awake()
 	{
+		titlePanel = GameObject.FindWithTag(Tags.UITitlePanel).GetComponent<NGUIPanel>();
+		radyPanel = GameObject.FindWithTag(Tags.UIRadyPanel).GetComponent<NGUIPanel>();
+		playPanel = GameObject.FindWithTag(Tags.UIPlayPanel).GetComponent<NGUIPanel>();
+		gameOverPanel = GameObject.FindWithTag(Tags.UIGameOverPanel).GetComponent<NGUIPanel>();
+		
+
 		if (DebugManager.FunctionLog)
 		{
 			Debug.Log(this.ToString() + " Awake");
 		}
 		gameData = GameDataSingleton.Instance;
 
-		SetDelegateSetUpFunc_Title(this.test);
-		SetDelegateSetUpFunc_Title(this.test);
-
 		sequence = gameData.StartSeq;
+
+
+		InitializeDelegateLists();
 	}
 
 	void Start()
@@ -53,11 +78,11 @@ public class GameController : MonoBehaviour
 			case GameSequence.Title:
 				SetUp_Title();
 				break;
-			case GameSequence.Rady:
-				SetUp_Rady();
+			case GameSequence.Restart:
+				SetUp_Restart();
 				break;
 			default:
-				Debug.LogError(this.ToString() + " seqence is not title or rady");
+				Debug.LogError(this.ToString() + " seqence is not title or restart");
 				break;
 		}
 	}
@@ -74,6 +99,10 @@ public class GameController : MonoBehaviour
 	void SetUp_Title()
 	{
 		setUpFunctions_Title.RunAllFunction();
+	}
+	void SetUp_Restart()
+	{
+		setUpFunctions_Restart.RunAllFunction();
 	}
 
 	void SetUp_Rady()
@@ -104,6 +133,16 @@ public class GameController : MonoBehaviour
 	{
 		setUpFunctions_Title.Add(func);
 	}
+
+	/// <summary>
+	/// リスタートになった時に実行する関数　を登録します
+	/// </summary>
+	/// <param name="func"></param>
+	public void SetDelegateSetUpFunc_Restart(FuncDelegate func)
+	{
+		setUpFunctions_Restart.Add(func);
+	}
+
 	/// <summary>
 	/// "ゲーム開始準備状態になった際に実行する関数"を登録します
 	/// </summary>
@@ -127,5 +166,36 @@ public class GameController : MonoBehaviour
 	public void SetDelegateSetUpFunc_GameOver(FuncDelegate func)
 	{
 		setUpFunctions_GameOver.Add(func);
+	}
+
+	void InitializeDelegateLists()
+	{
+		//タイトル画面になった際に実行する関数
+		SetDelegateSetUpFunc_Title(titlePanel.SetStateDisplay);
+		SetDelegateSetUpFunc_Title(playPanel.SetStateHidden);
+		SetDelegateSetUpFunc_Title(radyPanel.SetStateHidden);
+		SetDelegateSetUpFunc_Title(gameOverPanel.SetStateHidden);
+
+		//リスタート画面になった際に実行する関数
+		SetDelegateSetUpFunc_Restart(titlePanel.SetStateHidden);
+		SetDelegateSetUpFunc_Restart(playPanel.SetStateHidden);
+		SetDelegateSetUpFunc_Restart(radyPanel.SetStateHidden);
+		SetDelegateSetUpFunc_Restart(gameOverPanel.SetStateHidden);
+
+		//ゲーム開始準備画面に実行する関数
+		SetDelegateSetUpFunc_Rady(radyPanel.SetStateFadeIn);
+
+		//ゲーム開始時に実行する関数
+		SetDelegateSetUpFunc_Play(playPanel.SetStateFadeIn);
+
+		//ゲームオーバーになった際に実行する関数
+		SetDelegateSetUpFunc_GameOver(playPanel.SetStateFadeOut);
+		SetDelegateSetUpFunc_GameOver(gameOverPanel.SetStateFadeIn);
+		 	
+	}
+
+	public void Test()
+	{
+		Debug.Log("test");
 	}
 }

@@ -44,6 +44,7 @@ public class Tank : MonoBehaviour
 
 		muzzle = GetComponentInChildren<TankMuzzle>();
 		barrelSupport = GetComponentInChildren<TankBarrelSupport>();
+
 		buttonFire.SetDelegate_OnPressFunction(muzzle.Fire);
 
         MaxVelocity = new Vector3(MaxSpeed, 0, 0);

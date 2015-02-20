@@ -98,6 +98,24 @@ public class NGUIPanel : MonoBehaviour
 	/// <summary>
 	/// 
 	/// </summary>
+	public void SetStateHidden()
+	{
+		panel.alpha = 0;
+		SetState(UIPanelState.Hidden);
+	}
+
+	/// <summary>
+	/// 
+	/// </summary>
+	public void SetStateDisplay()
+	{
+		panel.alpha = this.maxAlpha;
+		SetState(UIPanelState.Display);
+	}
+
+	/// <summary>
+	/// 
+	/// </summary>
 	/// <param name="state"></param>
 	void SetState(UIPanelState state)
 	{

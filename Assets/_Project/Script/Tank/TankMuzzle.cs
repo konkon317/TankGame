@@ -37,15 +37,11 @@ public class TankMuzzle : MonoBehaviour
 	
 	}
 
-	
-
-
 	/// <summary>
 	/// 発砲します
 	/// </summary>
 	public void Fire()
 	{
-
 		GameObject obj = (GameObject)Instantiate(bulletPrefab);	//プリファブからクローンを作成
 		obj.transform.position = transform.position;			//位置の設定
 		obj.transform.Rotate(transform.rotation.eulerAngles);	//弾の向きを設定

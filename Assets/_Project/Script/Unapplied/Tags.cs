@@ -11,4 +11,9 @@ public class Tags : MonoBehaviour
     public const string WallBlockCube="WallBlockCube";
     public const string WallBlockCubeWeak="WallBlockCubeWeak";
 	public const string DetonatorParent = "DetonatorParent";
+
+	public const string UIPlayPanel = "UIPlayPanel";
+	public const string UITitlePanel = "UITitlePanel";
+	public const string UIRadyPanel = "UIRadyPanel";
+	public const string UIGameOverPanel = "UIGameOverPanel";
 }

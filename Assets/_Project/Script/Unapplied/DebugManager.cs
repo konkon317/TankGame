@@ -4,6 +4,6 @@ using System.Collections;
 public class DebugManager  
 {
 
-	public static bool FunctionLog = false;
+	public static bool FunctionLog = true;
 
 }

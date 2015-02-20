@@ -98,6 +98,8 @@ public class NGUIButton : MonoBehaviour
 		//onPressは押された瞬間と離された瞬間の二つのタイミングで呼ばれます
 		//そのためisHoldingに押されている間なのかを保存しています
 
+		Debug.Log(this.ToString());
+
 		isHolding=!isHolding;
 
 		if (this.enabled)

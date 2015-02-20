@@ -22,7 +22,7 @@ public class GameDataSingleton : MonoBehaviour
 	}
 
 	public GameController.GameSequence StartSeq { get { return startSeq; } }
-	GameController.GameSequence startSeq=GameController.GameSequence.Title;
+	GameController.GameSequence startSeq=GameController.GameSequence.Restart;
 
 	/// <summary>
 	/// シーンをりロードした際の開始シーケンスを指定します
@@ -30,7 +30,7 @@ public class GameDataSingleton : MonoBehaviour
 	/// <param name="seq">Title タイトル画面から開始 : Rady ゲームスタート準備から開始</param>
 	public void SetStartSeq(GameController.GameSequence seq)
 	{
-		if (seq == GameController.GameSequence.Title || seq == GameController.GameSequence.Rady)
+		if (seq == GameController.GameSequence.Title || seq == GameController.GameSequence.Restart)
 		{
 			startSeq = seq;
 		}

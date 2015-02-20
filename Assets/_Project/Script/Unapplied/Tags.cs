@@ -16,4 +16,6 @@ public class Tags : MonoBehaviour
 	public const string UITitlePanel = "UITitlePanel";
 	public const string UIRadyPanel = "UIRadyPanel";
 	public const string UIGameOverPanel = "UIGameOverPanel";
+
+	public const string ScreenFader = "ScreenFader";
 }

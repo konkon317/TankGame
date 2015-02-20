@@ -18,6 +18,7 @@ public class GameController : MonoBehaviour
 		GameOver,
 	}
 
+	ScreenFader screenFader;
 	
 	//状態が切り替わった際に実行する関数をリスト
 	FuncDelegateList setUpFunctions_Title=new FuncDelegateList();
@@ -44,6 +45,7 @@ public class GameController : MonoBehaviour
 	NGUIPanel playPanel;
 	NGUIPanel gameOverPanel;
 
+	bool DidSetStartScene=false;
 
 	/// <summary>
 	///ゲームの実行状態
@@ -59,7 +61,8 @@ public class GameController : MonoBehaviour
 		radyPanel = GameObject.FindWithTag(Tags.UIRadyPanel).GetComponent<NGUIPanel>();
 		playPanel = GameObject.FindWithTag(Tags.UIPlayPanel).GetComponent<NGUIPanel>();
 		gameOverPanel = GameObject.FindWithTag(Tags.UIGameOverPanel).GetComponent<NGUIPanel>();
-		
+
+		screenFader = GameObject.FindWithTag(Tags.ScreenFader).GetComponent<ScreenFader>();
 
 		if (DebugManager.FunctionLog)
 		{
@@ -72,6 +75,8 @@ public class GameController : MonoBehaviour
 
 		InitializeDelegateLists();
 		InitializeButtonDelegate();
+
+		screenFader.SetStateBlack();
 	}
 
 	void Start()
@@ -94,7 +99,7 @@ public class GameController : MonoBehaviour
 	{
 		/*if (Input.GetKeyDown(KeyCode.Return))
 		{
-			Application.LoadLevel("mainScene");
+			
 		}*/
 
 		switch (Sequence)
@@ -103,7 +108,7 @@ public class GameController : MonoBehaviour
 				OnTitle();
 				break;
 			case GameSequence.Restart:
-				
+				OnRestart();
 				break;
 			case GameSequence.Rady:
 				OnRady();
@@ -112,6 +117,7 @@ public class GameController : MonoBehaviour
 				OnPlaying();
 				break;
 			case GameSequence.GameOver:
+				OnGameOver();
 				break;
 		}
 	}
@@ -121,6 +127,14 @@ public class GameController : MonoBehaviour
 		if (titlePanel.state == UIPanelState.Hidden)
 		{
 			SetSequence(GameSequence.Rady);
+		}
+	}
+
+	void OnRestart()
+	{
+		if (screenFader.Color == Color.clear)
+		{
+			SetSequence(GameSequence.Playing);
 		}
 	}
 
@@ -134,6 +148,39 @@ public class GameController : MonoBehaviour
 		if (gameOverflag)
 		{
 			SetSequence(GameSequence.GameOver);
+		}
+	}
+
+	void OnGameOver()
+	{
+		if (screenFader.Color == Color.black)
+		{
+			Application.LoadLevel("mainScene");
+		}
+		
+	}
+
+	void ToTitleWithLoad()
+	{
+		if (!DidSetStartScene)
+		{
+			DidSetStartScene = true;
+			screenFader.SetStateFadeToBlack();			
+			gameOverPanel.SetStateFadeOut();
+
+			gameData.SetStartSeq(GameSequence.Title);
+		}
+	}
+
+	void ToRestartWithLoad()
+	{
+		if (!DidSetStartScene)
+		{
+			DidSetStartScene = true;
+			screenFader.SetStateFadeToBlack();			
+			gameOverPanel.SetStateFadeOut();
+
+			gameData.SetStartSeq(GameSequence.Restart);
 		}
 	}
 
@@ -233,12 +280,14 @@ public class GameController : MonoBehaviour
 		SetDelegateSetUpFunc_Title(playPanel.SetStateHidden);
 		SetDelegateSetUpFunc_Title(radyPanel.SetStateHidden);
 		SetDelegateSetUpFunc_Title(gameOverPanel.SetStateHidden);
+		SetDelegateSetUpFunc_Title(screenFader.SetStateFadeToClear);
 
 		//リスタート画面になった際に実行する関数
 		SetDelegateSetUpFunc_Restart(titlePanel.SetStateHidden);
 		SetDelegateSetUpFunc_Restart(playPanel.SetStateHidden);
 		SetDelegateSetUpFunc_Restart(radyPanel.SetStateHidden);
 		SetDelegateSetUpFunc_Restart(gameOverPanel.SetStateHidden);
+		SetDelegateSetUpFunc_Restart(screenFader.SetStateFadeToClear);
 
 		//ゲーム開始準備画面に実行する関数
 		SetDelegateSetUpFunc_Rady(radyPanel.SetStateFadeIn);
@@ -255,6 +304,10 @@ public class GameController : MonoBehaviour
 	void InitializeButtonDelegate()
 	{
 		GameStartButton.SetDelegate_OnPressFunction(titlePanel.SetStateFadeOut);
+
+		GoTitleButton.SetDelegate_OnPressFunction(this.ToTitleWithLoad);
+		RestartButton.SetDelegate_OnPressFunction(this.ToRestartWithLoad);
+
 	}
 
 	

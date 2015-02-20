@@ -22,7 +22,7 @@ public class GameDataSingleton : MonoBehaviour
 	}
 
 	public GameController.GameSequence StartSeq { get { return startSeq; } }
-	GameController.GameSequence startSeq=GameController.GameSequence.Restart;
+	GameController.GameSequence startSeq=GameController.GameSequence.Title;
 
 	/// <summary>
 	/// シーンをりロードした際の開始シーケンスを指定します

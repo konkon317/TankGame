@@ -51,6 +51,8 @@ public class GameController : MonoBehaviour
 	public GameSequence Sequence { get { return sequence; } }
 	GameSequence sequence;
 
+	bool gameOverflag=false;
+
 	void Awake()
 	{
 		titlePanel = GameObject.FindWithTag(Tags.UITitlePanel).GetComponent<NGUIPanel>();
@@ -69,6 +71,7 @@ public class GameController : MonoBehaviour
 
 
 		InitializeDelegateLists();
+		InitializeButtonDelegate();
 	}
 
 	void Start()
@@ -89,13 +92,73 @@ public class GameController : MonoBehaviour
 
 	void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.Return))
+		/*if (Input.GetKeyDown(KeyCode.Return))
 		{
 			Application.LoadLevel("mainScene");
+		}*/
+
+		switch (Sequence)
+		{ 
+			case GameSequence.Title:
+				OnTitle();
+				break;
+			case GameSequence.Restart:
+				
+				break;
+			case GameSequence.Rady:
+				OnRady();
+				break;
+			case GameSequence.Playing:
+				OnPlaying();
+				break;
+			case GameSequence.GameOver:
+				break;
 		}
 	}
 
+	void OnTitle()
+	{
+		if (titlePanel.state == UIPanelState.Hidden)
+		{
+			SetSequence(GameSequence.Rady);
+		}
+	}
 
+	void OnRady()
+	{
+		SetSequence(GameSequence.Playing);
+	}
+
+	void OnPlaying()
+	{
+		if (gameOverflag)
+		{
+			SetSequence(GameSequence.GameOver);
+		}
+	}
+
+	void SetSequence(GameSequence targetSeq)
+	{
+		switch (targetSeq)
+		{
+			case GameSequence.Rady:
+				SetUp_Rady();
+				break;
+			case GameSequence.Playing:
+				SetUp_Play();
+				break;
+			case GameSequence.GameOver:
+				SetUp_GameOver();
+				break;
+		}
+		sequence = targetSeq;
+	}
+
+	public void SetGameOverFlag()
+	{
+		gameOverflag = true;
+	}
+	
 	void SetUp_Title()
 	{
 		setUpFunctions_Title.RunAllFunction();
@@ -118,11 +181,6 @@ public class GameController : MonoBehaviour
 	void SetUp_GameOver()
 	{
 		setUpFunctions_GameOver.RunAllFunction();
-	}
-
-	void test()
-	{
-		Debug.Log("test");
 	}
 
 //以下コールバック関数の登録
@@ -194,8 +252,12 @@ public class GameController : MonoBehaviour
 		 	
 	}
 
-	public void Test()
+	void InitializeButtonDelegate()
 	{
-		Debug.Log("test");
+		GameStartButton.SetDelegate_OnPressFunction(titlePanel.SetStateFadeOut);
 	}
+
+	
+
+	
 }

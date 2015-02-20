@@ -73,9 +73,9 @@ public class Tank : MonoBehaviour
 				rigidbody.velocity = MaxVelocity;
 			}
 
-			ChangeAngele();
-			//barrelSupport.ChangeAngle(burrelAngleSlider.sliderValue);
-			barrelSupport.ChangeAngle(barrelAngle);
+			//ChangeAngele();
+			barrelSupport.ChangeAngle(burrelAngleSlider.sliderValue);
+			//barrelSupport.ChangeAngle(barrelAngle);
 
 			if (Input.GetKeyDown(KeyCode.Return))
 			{
@@ -111,6 +111,7 @@ public class Tank : MonoBehaviour
 	{
 		isCrashed = true;
 		rigidbody.velocity = Vector3.zero;
+		rigidbody.isKinematic = true;
 		crashEfect.SetActive(true);
 
 		gameController.SetGameOverFlag();

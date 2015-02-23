@@ -24,6 +24,7 @@ public class Tank : MonoBehaviour
 	float barrelAngle;
 
 	GameController gameController;
+	GameInputManager gameInputManager;
 
 
 	/// <summary>
@@ -36,6 +37,7 @@ public class Tank : MonoBehaviour
 	void Awake()
 	{
 		gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
+		gameInputManager = GameObject.FindWithTag("GameController").GetComponent<GameInputManager>();
 	
 		if (DebugManager.FunctionLog)
 		{
@@ -62,7 +64,7 @@ public class Tank : MonoBehaviour
 		isCrashed = false;
 	}
 
-	void Update()
+	void LateUpdate()
 	{
 		if (gameController.Sequence==GameController.GameSequence.Playing)
 		{
@@ -73,9 +75,9 @@ public class Tank : MonoBehaviour
 				rigidbody.velocity = MaxVelocity;
 			}
 
-			//ChangeAngele();
-			barrelSupport.ChangeAngle(burrelAngleSlider.sliderValue);
-			//barrelSupport.ChangeAngle(barrelAngle);
+			ChangeAngele();
+			//barrelSupport.ChangeAngle(burrelAngleSlider.sliderValue);
+			barrelSupport.ChangeAngle(barrelAngle);
 
 			if (Input.GetKeyDown(KeyCode.Return))
 			{
@@ -86,8 +88,8 @@ public class Tank : MonoBehaviour
 
 	void ChangeAngele()
 	{
-
-		barrelAngle += Input.GetAxis("Vertical")  * Time.deltaTime*1.5f;
+		float defY=gameInputManager.DeferencePositionY_FromLastFrame;
+		barrelAngle += (float)(defY/Screen.height)*1.5f;
 
 		if (barrelAngle > 1) barrelAngle = 1;
 		if (barrelAngle < 0) barrelAngle = 0;

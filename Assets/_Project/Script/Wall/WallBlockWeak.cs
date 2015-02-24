@@ -32,6 +32,6 @@ public class WallBlockWeak : MonoBehaviour {
 
 		detonator.transform.parent = GameObject.FindWithTag(Tags.DetonatorParent).transform;
 
-        Destroy(parent.gameObject, 5f);
+       
     }
 }

@@ -9,6 +9,8 @@ public class WallParent : MonoBehaviour
 	GameObject WallBlcok_Prefab;
 	GameObject WallBlockWeak_Prefab;
 
+	ScoreManager scoreManager;
+
 	public bool Crashed = false;
 	int counter = 0;
 	  
@@ -23,6 +25,8 @@ public class WallParent : MonoBehaviour
 
 		WallBlcok_Prefab = Resources.Load<GameObject>(ResourcesPath.Prefab_WallBlcok);
 		WallBlockWeak_Prefab = Resources.Load<GameObject>(ResourcesPath.Prefab_WallBlockWeak);
+
+		scoreManager = GameObject.FindWithTag("GameController").GetComponent<ScoreManager>();
 	
 	}
 
@@ -44,6 +48,8 @@ public class WallParent : MonoBehaviour
 			if (counter == 2)
 			{
 				DisableColliderAllBlock();
+				Destroy(gameObject, 5f);
+				scoreManager.CountUp_CrashWallCounter();
 			}
 
 			counter++;

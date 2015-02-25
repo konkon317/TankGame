@@ -8,14 +8,24 @@ public class ScoreManager : MonoBehaviour
 	[SerializeField]
 	public UILabel walls;
 
-	int crashedWallsCount;
+
+	public float Meters
+	{
+		get
+		{
+			return tank.transform.position.x;
+		}
+	}
+
+	public int CrashedWalls{get {return crashedWalls;}}
+	int crashedWalls;
 
 	[SerializeField]
 	GameObject tank;
 
 	void Awake()
 	{
-		crashedWallsCount = 0;
+		crashedWalls = 0;
 	}
 
 	// Use this for initialization
@@ -27,13 +37,15 @@ public class ScoreManager : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		meters.text = tank.transform.position.x.ToString("N2") + " M";
-		walls.text = crashedWallsCount.ToString() + " walls";
-	
+			
 	}
 
 	public void CountUp_CrashWallCounter()
 	{
-		crashedWallsCount++;
+		crashedWalls++;
 	}
+
+	
+
+
 }

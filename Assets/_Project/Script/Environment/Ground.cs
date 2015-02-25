@@ -6,6 +6,11 @@ public class Ground : MonoBehaviour
 
     [SerializeField]
     Transform tank;
+
+	[SerializeField]
+	float size;
+	public float Size { get { return size;} }
+
 	// Use this for initialization
 	void Start () 
     {
@@ -19,7 +24,7 @@ public class Ground : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
     {
-        if (this.transform.position.x + (this.transform.localScale.x * 2) < tank.position.x)
+        if (this.transform.position.x + (Size* 2) < tank.position.x)
         {
             Destroy(this.gameObject);
         }

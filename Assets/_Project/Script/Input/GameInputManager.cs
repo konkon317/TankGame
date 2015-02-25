@@ -7,7 +7,8 @@ public class GameInputManager : MonoBehaviour
 	public enum InputMode
 	{ 
 		Mouse,
-		Touch
+		Touch,
+		KeyBord
 	}
 
 	int fingerID;
@@ -53,9 +54,10 @@ public class GameInputManager : MonoBehaviour
 				case InputMode.Touch:
 					TouchInput();
 					break;
-			
+				case InputMode.KeyBord:
+					KeyBordInput();
+					break;
 			}	
-
 		}
 	}
 
@@ -77,26 +79,11 @@ public class GameInputManager : MonoBehaviour
 						defY = touch.position.y - lastPos.y;
 						lastPos = touch.position;
 
-						switch (touch.phase)
+
+						if (touch.phase == TouchPhase.Ended)
 						{
-
-
-							case TouchPhase.Ended:
-								{
-									//指が離れた瞬間
-									//defY = touch.position.y - lastPos.y;
-									//lastPos = touch.position;
-
-									isTouching = false;
-								}
-								break;
-
-							case TouchPhase.Moved:
-								{
-									//画面上で指が動いている
-								
-								}
-								break;
+							//指が離れた瞬間
+							isTouching = false;
 						}
 					}
 				}
@@ -147,6 +134,11 @@ public class GameInputManager : MonoBehaviour
 				}
 			}
 		}
+	}
+
+	void KeyBordInput()
+	{
+		defY = Input.GetAxis("Vertical")*500f*Time.deltaTime;
 	}
 
 

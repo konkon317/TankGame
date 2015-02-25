@@ -7,6 +7,7 @@ public class GroundMaker : MonoBehaviour {
     Transform tank;
 
     GameObject GroundPrefab;
+	Ground GroundPrefabComp;
 
     [SerializeField]
     Vector3 newGroundPosition;
@@ -19,6 +20,7 @@ public class GroundMaker : MonoBehaviour {
 		}
 
         GroundPrefab = Resources.Load<GameObject>(ResourcesPath.Prefab_Ground);
+		GroundPrefabComp = GroundPrefab.GetComponent<Ground>();
 
     }
 
@@ -36,7 +38,7 @@ public class GroundMaker : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
     {
-        while (tank.transform.position.x + (GroundPrefab.transform.transform.localScale.x*2) > newGroundPosition.x)
+        while (tank.transform.position.x + (GroundPrefabComp.Size*2) > newGroundPosition.x)
         {
             Make();
         }
@@ -51,13 +53,13 @@ public class GroundMaker : MonoBehaviour {
         Ground g = obj.GetComponent<Ground>();
         g.SetTankTransform(tank);
 
-        newGroundPosition +=  new Vector3(GroundPrefab.transform.localScale.x, 0f, 0f);
+        newGroundPosition +=  new Vector3(GroundPrefabComp.Size, 0f, 0f);
 
     }
 
     void Initialize()
     {
-        newGroundPosition = new Vector3(GroundPrefab.transform.localScale.x * 2, 0f, 0f);
+        newGroundPosition = new Vector3(GroundPrefabComp.Size * 2, 0f, 0f);
 
     }
 }

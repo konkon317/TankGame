@@ -69,7 +69,7 @@ public class Tank : MonoBehaviour
 		if (gameController.Sequence==GameController.GameSequence.Playing)
 		{
 
-			rigidbody.AddForce(new Vector3(5f, 0f, 0f) * rigidbody.mass*Time.deltaTime, ForceMode.Impulse);
+            rigidbody.AddForce(new Vector3(5f, 0f, 0f) * rigidbody.mass*Time.deltaTime, ForceMode.Impulse);
 			if (rigidbody.velocity.magnitude > MaxVelocity.magnitude)
 			{
 				rigidbody.velocity = MaxVelocity;

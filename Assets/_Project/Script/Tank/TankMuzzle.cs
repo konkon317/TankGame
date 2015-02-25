@@ -8,6 +8,8 @@ public class TankMuzzle : MonoBehaviour
 	Transform bulletsParent;
 	Tank tank;
 
+    FiringManager firingManager;
+
 	float point;
 
 	void Awake()
@@ -16,6 +18,8 @@ public class TankMuzzle : MonoBehaviour
 		{
 			Debug.Log(this.ToString() + " Awake");
 		}
+
+        firingManager = GameObject.FindWithTag(Tags.GameController).GetComponent<FiringManager>();
 
 		bulletPrefab = Resources.Load<GameObject>(ResourcesPath.Prefab_Bullet);
 		bulletsParent = GameObject.FindWithTag(Tags.BulletsParent).transform;
@@ -42,20 +46,25 @@ public class TankMuzzle : MonoBehaviour
 	/// </summary>
 	public void Fire()
 	{
-		GameObject obj = (GameObject)Instantiate(bulletPrefab);	//プリファブからクローンを作成
-		obj.transform.position = transform.position;			//位置の設定
-		obj.transform.Rotate(transform.rotation.eulerAngles);	//弾の向きを設定
-		
-		//大きさの設定
-		Vector3 tankScale = tank.transform.localScale;
-		Vector3 defaultScale = obj.transform.localScale;
-		//obj.transform.localScale = new Vector3(defaultScale.x * tankScale.x, defaultScale.y * tankScale.y, defaultScale.z * tankScale.z);
+        if(firingManager.CanFire())
+        {
+            firingManager.OnFire();
 
-		//力をかけて弾を飛ばす
-        obj.rigidbody.AddForce(transform.forward *2000*obj.rigidbody.mass);
+            GameObject obj = (GameObject)Instantiate(bulletPrefab);	//プリファブからクローンを作成
+            obj.transform.position = transform.position;			//位置の設定
+            obj.transform.Rotate(transform.rotation.eulerAngles);	//弾の向きを設定
+		
+            //大きさの設定
+            Vector3 tankScale = tank.transform.localScale;
+            Vector3 defaultScale = obj.transform.localScale;
+            //obj.transform.localScale = new Vector3(defaultScale.x * tankScale.x, defaultScale.y * tankScale.y, defaultScale.z * tankScale.z);
+
+            //力をかけて弾を飛ばす
+            obj.rigidbody.AddForce(transform.forward * 2000 * obj.rigidbody.mass);
 	
-		//弾の親オブジェクトを設定
-		//（ヒエラルキービューを見やすくするために）
-		obj.transform.parent = bulletsParent;
+            //弾の親オブジェクトを設定
+            //（ヒエラルキービューを見やすくするために）
+            obj.transform.parent = bulletsParent;
+        }
 	}
 }

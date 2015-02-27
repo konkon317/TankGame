@@ -485,11 +485,11 @@ MonoBehaviour:
     e00: 360
     e01: 0
     e02: 0
-    e03: -359999.25
+    e03: -360000
     e10: 0
     e11: 360
     e12: 0
-    e13: -.75000006
+    e13: 0
     e20: 0
     e21: 0
     e22: 360
@@ -774,7 +774,7 @@ MonoBehaviour:
   mColor: {r: 0, g: 0, b: 0, a: 1}
   mPivot: 4
   mDepth: 1
-  mFont: {fileID: 11400000, guid: ca046a09e888a4c89b5dfd8d783808d7, type: 2}
+  mFont: {fileID: 11458444, guid: 769467d3a72c246d8a03560f2b0d1ed0, type: 2}
   mText: Restart
   mMaxLineWidth: 0
   mMaxLineHeight: 0
@@ -945,11 +945,11 @@ MonoBehaviour:
     e00: 360
     e01: 0
     e02: 0
-    e03: -359999.25
+    e03: -360000
     e10: 0
     e11: 360
     e12: 0
-    e13: -.75000006
+    e13: 0
     e20: 0
     e21: 0
     e22: 360
@@ -2818,16 +2818,18 @@ MonoBehaviour:
   mColor: {r: 0, g: 0, b: 0, a: 1}
   mPivot: 4
   mDepth: 2
-  mFont: {fileID: 11400000, guid: ca046a09e888a4c89b5dfd8d783808d7, type: 2}
-  mText: "\u305F\u3093\u304F\u3000\u3089\u3093\u3000\u305F\u3044\u3068\u308B"
+  mFont: {fileID: 11458444, guid: 769467d3a72c246d8a03560f2b0d1ed0, type: 2}
+  mText: 'Tank Run
+
+'
   mMaxLineWidth: 0
   mMaxLineHeight: 0
   mEncoding: 1
   mMaxLineCount: 0
   mPassword: 0
   mShowLastChar: 0
-  mEffectStyle: 0
-  mEffectColor: {r: 0, g: 0, b: 0, a: 1}
+  mEffectStyle: 2
+  mEffectColor: {r: 1, g: 1, b: 1, a: 1}
   mSymbols: 1
   mEffectDistance: {x: 1, y: 1}
   mShrinkToFit: 0
@@ -2876,7 +2878,7 @@ MonoBehaviour:
   mColor: {r: 0, g: 0, b: 0, a: 1}
   mPivot: 5
   mDepth: 0
-  mFont: {fileID: 11400000, guid: ca046a09e888a4c89b5dfd8d783808d7, type: 2}
+  mFont: {fileID: 11458444, guid: 769467d3a72c246d8a03560f2b0d1ed0, type: 2}
   mText: New Label
   mMaxLineWidth: 0
   mMaxLineHeight: 0
@@ -2884,8 +2886,8 @@ MonoBehaviour:
   mMaxLineCount: 0
   mPassword: 0
   mShowLastChar: 0
-  mEffectStyle: 0
-  mEffectColor: {r: 0, g: 0, b: 0, a: 1}
+  mEffectStyle: 2
+  mEffectColor: {r: 1, g: 1, b: 1, a: 1}
   mSymbols: 1
   mEffectDistance: {x: 1, y: 1}
   mShrinkToFit: 0
@@ -2987,7 +2989,7 @@ MonoBehaviour:
   mColor: {r: 0, g: 0, b: 0, a: 1}
   mPivot: 5
   mDepth: 0
-  mFont: {fileID: 11400000, guid: ca046a09e888a4c89b5dfd8d783808d7, type: 2}
+  mFont: {fileID: 11458444, guid: 769467d3a72c246d8a03560f2b0d1ed0, type: 2}
   mText: New Label
   mMaxLineWidth: 0
   mMaxLineHeight: 0
@@ -2995,8 +2997,8 @@ MonoBehaviour:
   mMaxLineCount: 0
   mPassword: 0
   mShowLastChar: 0
-  mEffectStyle: 0
-  mEffectColor: {r: 0, g: 0, b: 0, a: 1}
+  mEffectStyle: 2
+  mEffectColor: {r: 1, g: 1, b: 1, a: 1}
   mSymbols: 1
   mEffectDistance: {x: 1, y: 1}
   mShrinkToFit: 0
@@ -3142,11 +3144,11 @@ MonoBehaviour:
     e00: 360
     e01: 0
     e02: 0
-    e03: -359999.25
+    e03: -360000
     e10: 0
     e11: 360
     e12: 0
-    e13: -.75000006
+    e13: 0
     e20: 0
     e21: 0
     e22: 360
@@ -3360,7 +3362,7 @@ Transform:
   m_GameObject: {fileID: 1048769627}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 80, y: 80, z: 1}
+  m_LocalScale: {x: 90, y: 90, z: 1}
   m_Children: []
   m_Father: {fileID: 564706752}
   m_RootOrder: 2
@@ -4059,7 +4061,7 @@ Transform:
   m_GameObject: {fileID: 1267584217}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 80, y: 80, z: 1}
+  m_LocalScale: {x: 90, y: 90, z: 1}
   m_Children: []
   m_Father: {fileID: 102330766}
   m_RootOrder: 2
@@ -4749,7 +4751,7 @@ MonoBehaviour:
   mColor: {r: 0, g: 0, b: 0, a: 1}
   mPivot: 3
   mDepth: 0
-  mFont: {fileID: 11400000, guid: ca046a09e888a4c89b5dfd8d783808d7, type: 2}
+  mFont: {fileID: 11458444, guid: 769467d3a72c246d8a03560f2b0d1ed0, type: 2}
   mText: walls
   mMaxLineWidth: 0
   mMaxLineHeight: 0
@@ -4757,10 +4759,10 @@ MonoBehaviour:
   mMaxLineCount: 0
   mPassword: 0
   mShowLastChar: 0
-  mEffectStyle: 0
-  mEffectColor: {r: 0, g: 0, b: 0, a: 1}
+  mEffectStyle: 2
+  mEffectColor: {r: 1, g: 1, b: 1, a: 1}
   mSymbols: 1
-  mEffectDistance: {x: 1, y: 1}
+  mEffectDistance: {x: 2, y: 2}
   mShrinkToFit: 0
   mLineWidth: 0
   mMultiline: 1
@@ -4820,11 +4822,11 @@ MonoBehaviour:
     e00: 360
     e01: 0
     e02: 0
-    e03: -359999.25
+    e03: -360000
     e10: 0
     e11: 360
     e12: 0
-    e13: -.75000006
+    e13: 0
     e20: 0
     e21: 0
     e22: 360
@@ -5053,18 +5055,18 @@ MonoBehaviour:
   mColor: {r: 1, g: 0, b: 0, a: 1}
   mPivot: 4
   mDepth: 4
-  mFont: {fileID: 11400000, guid: ca046a09e888a4c89b5dfd8d783808d7, type: 2}
-  mText: "\u3052\u30FC\u3080\u3000\u3044\u305A\u3000\u304A\u30FC\u3070\u30FC"
+  mFont: {fileID: 11458444, guid: 769467d3a72c246d8a03560f2b0d1ed0, type: 2}
+  mText: Game Is Over
   mMaxLineWidth: 0
   mMaxLineHeight: 0
   mEncoding: 1
   mMaxLineCount: 0
   mPassword: 0
   mShowLastChar: 0
-  mEffectStyle: 0
-  mEffectColor: {r: 1, g: 1, b: 1, a: 1}
+  mEffectStyle: 2
+  mEffectColor: {r: 0, g: 0, b: 0, a: 1}
   mSymbols: 1
-  mEffectDistance: {x: 1, y: 1}
+  mEffectDistance: {x: 2, y: 2}
   mShrinkToFit: 0
   mLineWidth: 0
   mMultiline: 1
@@ -5152,7 +5154,7 @@ MonoBehaviour:
   mColor: {r: 0, g: 0, b: 0, a: 1}
   mPivot: 3
   mDepth: 0
-  mFont: {fileID: 11400000, guid: ca046a09e888a4c89b5dfd8d783808d7, type: 2}
+  mFont: {fileID: 11458444, guid: 769467d3a72c246d8a03560f2b0d1ed0, type: 2}
   mText: meters
   mMaxLineWidth: 0
   mMaxLineHeight: 0
@@ -5160,10 +5162,10 @@ MonoBehaviour:
   mMaxLineCount: 0
   mPassword: 0
   mShowLastChar: 0
-  mEffectStyle: 0
-  mEffectColor: {r: 0, g: 0, b: 0, a: 1}
+  mEffectStyle: 2
+  mEffectColor: {r: 1, g: 1, b: 1, a: 1}
   mSymbols: 1
-  mEffectDistance: {x: 1, y: 1}
+  mEffectDistance: {x: 2, y: 2}
   mShrinkToFit: 0
   mLineWidth: 0
   mMultiline: 1
@@ -5301,7 +5303,7 @@ MonoBehaviour:
   mColor: {r: .0294117928, g: .0272491612, b: .0272491612, a: 1}
   mPivot: 4
   mDepth: 1
-  mFont: {fileID: 11400000, guid: ca046a09e888a4c89b5dfd8d783808d7, type: 2}
+  mFont: {fileID: 11458444, guid: 769467d3a72c246d8a03560f2b0d1ed0, type: 2}
   mText: GameStart
   mMaxLineWidth: 0
   mMaxLineHeight: 0
@@ -5986,7 +5988,7 @@ Transform:
   m_GameObject: {fileID: 1954019346}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 80, y: 80, z: 1}
+  m_LocalScale: {x: 90, y: 90, z: 1}
   m_Children: []
   m_Father: {fileID: 1363965419}
   m_RootOrder: 2
@@ -6054,7 +6056,7 @@ MonoBehaviour:
   mColor: {r: 0, g: 0, b: 0, a: 1}
   mPivot: 4
   mDepth: 3
-  mFont: {fileID: 11400000, guid: ca046a09e888a4c89b5dfd8d783808d7, type: 2}
+  mFont: {fileID: 11458444, guid: 769467d3a72c246d8a03560f2b0d1ed0, type: 2}
   mText: Title
   mMaxLineWidth: 0
   mMaxLineHeight: 0
@@ -6204,7 +6206,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2084598761}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.747070312, y: .75000006, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1526832222}

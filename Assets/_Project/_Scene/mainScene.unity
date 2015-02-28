@@ -262,7 +262,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 300, y: 200, z: 0}
+  m_Size: {x: 300, y: 100, z: 0}
   m_Center: {x: 0, y: 0, z: -1}
 --- !u!1 &25526224
 GameObject:
@@ -405,7 +405,7 @@ Transform:
   m_GameObject: {fileID: 74025500}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 300, y: 200, z: 1}
+  m_LocalScale: {x: 300, y: 100, z: 1}
   m_Children: []
   m_Father: {fileID: 1234725376}
   m_RootOrder: 0
@@ -422,7 +422,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mDepth: 2
+  mDepth: 0
   mAtlas: {fileID: 11464820, guid: e0879f961f92b364595c2cb169859055, type: 2}
   mSpriteName: Button
   mFillCenter: 1
@@ -485,11 +485,11 @@ MonoBehaviour:
     e00: 360
     e01: 0
     e02: 0
-    e03: -359998.719
+    e03: -359999.375
     e10: 0
     e11: 360
     e12: 0
-    e13: -1.29496408
+    e13: -.62937063
     e20: 0
     e21: 0
     e22: 360
@@ -618,7 +618,7 @@ Transform:
   m_GameObject: {fileID: 161930752}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 300, y: 200, z: 1}
+  m_LocalScale: {x: 300, y: 100, z: 1}
   m_Children: []
   m_Father: {fileID: 9093217}
   m_RootOrder: 0
@@ -667,7 +667,7 @@ Transform:
   m_GameObject: {fileID: 164106876}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1}
-  m_LocalScale: {x: 50, y: 50, z: 1}
+  m_LocalScale: {x: 60, y: 60, z: 1}
   m_Children: []
   m_Father: {fileID: 9093217}
   m_RootOrder: 1
@@ -684,7 +684,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mColor: {r: 0, g: 0, b: 0, a: 1}
   mPivot: 4
-  mDepth: 1
+  mDepth: 4
   mFont: {fileID: 11458444, guid: 769467d3a72c246d8a03560f2b0d1ed0, type: 2}
   mText: Restart
   mMaxLineWidth: 0
@@ -693,10 +693,10 @@ MonoBehaviour:
   mMaxLineCount: 0
   mPassword: 0
   mShowLastChar: 0
-  mEffectStyle: 0
-  mEffectColor: {r: 0, g: 0, b: 0, a: 1}
+  mEffectStyle: 2
+  mEffectColor: {r: 1, g: 1, b: 1, a: 1}
   mSymbols: 1
-  mEffectDistance: {x: 1, y: 1}
+  mEffectDistance: {x: 2, y: 2}
   mShrinkToFit: 0
   mLineWidth: 0
   mMultiline: 1
@@ -724,7 +724,7 @@ Transform:
   m_GameObject: {fileID: 166462163}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 300, y: 200, z: 1}
+  m_LocalScale: {x: 300, y: 100, z: 1}
   m_Children: []
   m_Father: {fileID: 1390499540}
   m_RootOrder: 0
@@ -880,7 +880,7 @@ MonoBehaviour:
   mColor: {r: 1, g: 0, b: 0, a: 1}
   mPivot: 4
   mDepth: 0
-  mFont: {fileID: 11400000, guid: ca046a09e888a4c89b5dfd8d783808d7, type: 2}
+  mFont: {fileID: 0}
   mText: New Label
   mMaxLineWidth: 0
   mMaxLineHeight: 0
@@ -945,11 +945,11 @@ MonoBehaviour:
     e00: 360
     e01: 0
     e02: 0
-    e03: -359998.719
+    e03: -359999.375
     e10: 0
     e11: 360
     e12: 0
-    e13: -1.29496408
+    e13: -.62937063
     e20: 0
     e21: 0
     e22: 360
@@ -2311,7 +2311,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 594880670}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9780df193a28b5543b5e5deb6559f85c, type: 3}
   m_Name: 
@@ -3104,7 +3104,7 @@ Transform:
   m_GameObject: {fileID: 914369690}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 200, z: 0}
-  m_LocalScale: {x: 50, y: 50, z: 1}
+  m_LocalScale: {x: 120, y: 120, z: 1}
   m_Children: []
   m_Father: {fileID: 984042521}
   m_RootOrder: 1
@@ -3119,10 +3119,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9d0b5f3bbe925a408bd595c79d0bf63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mColor: {r: 0, g: 0, b: 0, a: 1}
+  mColor: {r: 1, g: 1, b: 0, a: 1}
   mPivot: 4
   mDepth: 2
-  mFont: {fileID: 11458444, guid: 769467d3a72c246d8a03560f2b0d1ed0, type: 2}
+  mFont: {fileID: 11467464, guid: 99346508e58547f438629573a51a60b3, type: 2}
   mText: 'Tank Run
 
 '
@@ -3133,9 +3133,9 @@ MonoBehaviour:
   mPassword: 0
   mShowLastChar: 0
   mEffectStyle: 2
-  mEffectColor: {r: 1, g: 1, b: 1, a: 1}
+  mEffectColor: {r: 0, g: 0, b: 0, a: 1}
   mSymbols: 1
-  mEffectDistance: {x: 1, y: 1}
+  mEffectDistance: {x: 3, y: 3}
   mShrinkToFit: 0
   mLineWidth: 0
   mMultiline: 1
@@ -3155,7 +3155,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &923100677
 Transform:
   m_ObjectHideFlags: 0
@@ -3164,7 +3164,7 @@ Transform:
   m_GameObject: {fileID: 923100676}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 550, y: 260, z: 0}
-  m_LocalScale: {x: 40, y: 40, z: 1}
+  m_LocalScale: {x: 50, y: 50, z: 1}
   m_Children: []
   m_Father: {fileID: 1526832222}
   m_RootOrder: 4
@@ -3182,7 +3182,7 @@ MonoBehaviour:
   mColor: {r: 0, g: 0, b: 0, a: 1}
   mPivot: 5
   mDepth: 0
-  mFont: {fileID: 11458444, guid: 769467d3a72c246d8a03560f2b0d1ed0, type: 2}
+  mFont: {fileID: 11467266, guid: 55c1bc786fbaeaf49a592a4e3e5ce3e1, type: 2}
   mText: New Label
   mMaxLineWidth: 0
   mMaxLineHeight: 0
@@ -3274,8 +3274,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 953489148}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 549.997559, y: 320, z: 0}
-  m_LocalScale: {x: 39.9999619, y: 39.9999619, z: 1.00007999}
+  m_LocalPosition: {x: 550, y: 320, z: 0}
+  m_LocalScale: {x: 50, y: 50, z: 1}
   m_Children: []
   m_Father: {fileID: 1526832222}
   m_RootOrder: 5
@@ -3293,7 +3293,7 @@ MonoBehaviour:
   mColor: {r: 0, g: 0, b: 0, a: 1}
   mPivot: 5
   mDepth: 0
-  mFont: {fileID: 11458444, guid: 769467d3a72c246d8a03560f2b0d1ed0, type: 2}
+  mFont: {fileID: 11467266, guid: 55c1bc786fbaeaf49a592a4e3e5ce3e1, type: 2}
   mText: New Label
   mMaxLineWidth: 0
   mMaxLineHeight: 0
@@ -3448,11 +3448,11 @@ MonoBehaviour:
     e00: 360
     e01: 0
     e02: 0
-    e03: -359998.719
+    e03: -359999.375
     e10: 0
     e11: 360
     e12: 0
-    e13: -1.29496408
+    e13: -.62937063
     e20: 0
     e21: 0
     e22: 360
@@ -3980,7 +3980,7 @@ MonoBehaviour:
   mColor: {r: 1, g: 0, b: 0, a: 1}
   mPivot: 4
   mDepth: 0
-  mFont: {fileID: 11400000, guid: ca046a09e888a4c89b5dfd8d783808d7, type: 2}
+  mFont: {fileID: 0}
   mText: New Label
   mMaxLineWidth: 0
   mMaxLineHeight: 0
@@ -4025,7 +4025,7 @@ MonoBehaviour:
   mColor: {r: .875, g: .11580883, b: .11580883, a: 1}
   mPivot: 4
   mDepth: 1
-  mFont: {fileID: 11400000, guid: ca046a09e888a4c89b5dfd8d783808d7, type: 2}
+  mFont: {fileID: 0}
   mText: Fire
   mMaxLineWidth: 0
   mMaxLineHeight: 0
@@ -4179,7 +4179,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1234725375}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 200, y: -120, z: 100}
+  m_LocalPosition: {x: 200, y: -120, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 74025501}
@@ -4257,7 +4257,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 300, y: 200, z: 0}
+  m_Size: {x: 300, y: 100, z: 0}
   m_Center: {x: 0, y: 0, z: -1.5}
 --- !u!114 &1234725382
 MonoBehaviour:
@@ -4829,7 +4829,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 300, y: 200, z: 0}
+  m_Size: {x: 300, y: 100, z: 0}
   m_Center: {x: 0, y: 0, z: -1}
 --- !u!114 &1390499546
 MonoBehaviour:
@@ -4998,7 +4998,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1502862804
 Transform:
   m_ObjectHideFlags: 0
@@ -5006,8 +5006,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1502862803}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -150, y: 130, z: 0}
-  m_LocalScale: {x: 39.9999619, y: 39.9999619, z: 1.00007999}
+  m_LocalPosition: {x: -150, y: 80, z: 0}
+  m_LocalScale: {x: 60, y: 60, z: 1.00007999}
   m_Children: []
   m_Father: {fileID: 82569634}
   m_RootOrder: 0
@@ -5038,9 +5038,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mColor: {r: 0, g: 0, b: 0, a: 1}
   mPivot: 3
-  mDepth: 0
-  mFont: {fileID: 11458444, guid: 769467d3a72c246d8a03560f2b0d1ed0, type: 2}
-  mText: walls
+  mDepth: 4
+  mFont: {fileID: 11467266, guid: 256c1492143325241861a5c271488d1e, type: 2}
+  mText: wall
   mMaxLineWidth: 0
   mMaxLineHeight: 0
   mEncoding: 1
@@ -5110,11 +5110,11 @@ MonoBehaviour:
     e00: 360
     e01: 0
     e02: 0
-    e03: -359998.719
+    e03: -359999.375
     e10: 0
     e11: 360
     e12: 0
-    e13: -1.29496408
+    e13: -.62937063
     e20: 0
     e21: 0
     e22: 360
@@ -5123,7 +5123,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  mAlpha: 1
+  mAlpha: 0
   mDebugInfo: 1
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 0, w: 0}
@@ -5373,7 +5373,7 @@ Transform:
   m_GameObject: {fileID: 1625674077}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 280, z: 0}
-  m_LocalScale: {x: 50, y: 50, z: 1}
+  m_LocalScale: {x: 120, y: 120, z: 1}
   m_Children: []
   m_Father: {fileID: 82569634}
   m_RootOrder: 4
@@ -5390,8 +5390,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mColor: {r: 1, g: 0, b: 0, a: 1}
   mPivot: 4
-  mDepth: 4
-  mFont: {fileID: 11458444, guid: 769467d3a72c246d8a03560f2b0d1ed0, type: 2}
+  mDepth: 3
+  mFont: {fileID: 11467464, guid: 99346508e58547f438629573a51a60b3, type: 2}
   mText: Game Is Over
   mMaxLineWidth: 0
   mMaxLineHeight: 0
@@ -5457,8 +5457,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1692749489}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -150, y: 200, z: 0}
-  m_LocalScale: {x: 39.9999619, y: 39.9999619, z: 1.00007999}
+  m_LocalPosition: {x: 0, y: 150, z: 0}
+  m_LocalScale: {x: 60, y: 60, z: 1.00007999}
   m_Children: []
   m_Father: {fileID: 82569634}
   m_RootOrder: 1
@@ -5487,10 +5487,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9d0b5f3bbe925a408bd595c79d0bf63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mColor: {r: 0, g: 0, b: 0, a: 1}
-  mPivot: 3
-  mDepth: 0
-  mFont: {fileID: 11458444, guid: 769467d3a72c246d8a03560f2b0d1ed0, type: 2}
+  mColor: {r: 1, g: 1, b: 0, a: 1}
+  mPivot: 4
+  mDepth: 4
+  mFont: {fileID: 11467266, guid: 256c1492143325241861a5c271488d1e, type: 2}
   mText: meters
   mMaxLineWidth: 0
   mMaxLineHeight: 0
@@ -5499,7 +5499,7 @@ MonoBehaviour:
   mPassword: 0
   mShowLastChar: 0
   mEffectStyle: 2
-  mEffectColor: {r: 1, g: 1, b: 1, a: 1}
+  mEffectColor: {r: 0, g: 0, b: 0, a: 1}
   mSymbols: 1
   mEffectDistance: {x: 2, y: 2}
   mShrinkToFit: 0
@@ -5621,7 +5621,7 @@ Transform:
   m_GameObject: {fileID: 1732109945}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1}
-  m_LocalScale: {x: 50, y: 50, z: 1}
+  m_LocalScale: {x: 60, y: 60, z: 1}
   m_Children: []
   m_Father: {fileID: 1390499540}
   m_RootOrder: 1
@@ -5647,10 +5647,10 @@ MonoBehaviour:
   mMaxLineCount: 0
   mPassword: 0
   mShowLastChar: 0
-  mEffectStyle: 0
-  mEffectColor: {r: 0, g: 0, b: 0, a: 1}
+  mEffectStyle: 2
+  mEffectColor: {r: 1, g: 1, b: 1, a: 1}
   mSymbols: 1
-  mEffectDistance: {x: 1, y: 1}
+  mEffectDistance: {x: 2, y: 2}
   mShrinkToFit: 0
   mLineWidth: 0
   mMultiline: 1
@@ -6472,7 +6472,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mColor: {r: 0, g: 0, b: 0, a: 1}
   mPivot: 4
-  mDepth: 3
+  mDepth: 4
   mFont: {fileID: 11458444, guid: 769467d3a72c246d8a03560f2b0d1ed0, type: 2}
   mText: Title
   mMaxLineWidth: 0
@@ -6481,10 +6481,10 @@ MonoBehaviour:
   mMaxLineCount: 0
   mPassword: 0
   mShowLastChar: 0
-  mEffectStyle: 0
-  mEffectColor: {r: 0, g: 0, b: 0, a: 1}
+  mEffectStyle: 2
+  mEffectColor: {r: 1, g: 1, b: 1, a: 1}
   mSymbols: 1
-  mEffectDistance: {x: 1, y: 1}
+  mEffectDistance: {x: 2, y: 2}
   mShrinkToFit: 0
   mLineWidth: 0
   mMultiline: 1
@@ -6623,7 +6623,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2084598761}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.27441406, y: 1.29496408, z: 0}
+  m_LocalPosition: {x: -.615234375, y: .62937063, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1526832222}

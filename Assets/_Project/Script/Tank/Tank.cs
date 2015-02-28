@@ -26,6 +26,7 @@ public class Tank : MonoBehaviour
 	GameController gameController;
 	GameInputManager gameInputManager;
 
+	Animator animator;
 
 	/// <summary>
 	/// 戦車が壊れているか(ゲームオーバーの条件)
@@ -36,6 +37,8 @@ public class Tank : MonoBehaviour
 
 	void Awake()
 	{
+		animator = GetComponent<Animator>();
+
 		gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
 		gameInputManager = GameObject.FindWithTag("GameController").GetComponent<GameInputManager>();
 	
@@ -113,6 +116,7 @@ public class Tank : MonoBehaviour
 	void Crash()
 	{
 		isCrashed = true;
+		this.animator.SetTrigger(HashIDs.Crash_Trigger);
 		rigidbody.velocity = Vector3.zero;
 		rigidbody.isKinematic = true;
 		crashEfect.SetActive(true);

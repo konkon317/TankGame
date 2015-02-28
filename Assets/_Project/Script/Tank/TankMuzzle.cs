@@ -10,6 +10,8 @@ public class TankMuzzle : MonoBehaviour
 
     FiringManager firingManager;
 
+	AudioClip fire_SE;
+
 	float point;
 
 	void Awake()
@@ -22,6 +24,8 @@ public class TankMuzzle : MonoBehaviour
         firingManager = GameObject.FindWithTag(Tags.GameController).GetComponent<FiringManager>();
 
 		bulletPrefab = Resources.Load<GameObject>(ResourcesPath.Prefab_Bullet);
+		fire_SE = Resources.Load<AudioClip>(ResourcesPath.SE_Fire);
+
 		bulletsParent = GameObject.FindWithTag(Tags.BulletsParent).transform;
 		tank = this.GetComponentInParent<Tank>();
 	}
@@ -65,6 +69,8 @@ public class TankMuzzle : MonoBehaviour
             //弾の親オブジェクトを設定
             //（ヒエラルキービューを見やすくするために）
             obj.transform.parent = bulletsParent;
+
+			AudioSource.PlayClipAtPoint(fire_SE, this.transform.position);
         }
 	}
 }

@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class WallBlockCubeWeak : MonoBehaviour {
+public class WallBlockCubeWeak : MonoBehaviour 
+{
+	
 
 	// Use this for initialization
 	void Start () 
@@ -24,6 +26,8 @@ public class WallBlockCubeWeak : MonoBehaviour {
         {
             WallBlockWeak parent = GetComponentInParent<WallBlockWeak>();
             parent.OnHit();
+
+		
         }
     }
 

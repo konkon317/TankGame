@@ -202,8 +202,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d44bc69c2ca5f943b845318866dc1bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 0}
-  trigger: 0
+  audioClip: {fileID: 8300000, guid: 2da54b6e8c740a44a9fd07006c42cdb2, type: 3}
+  trigger: 3
   volume: 1
   pitch: 1
 --- !u!114 &9093220
@@ -462,7 +462,7 @@ MonoBehaviour:
     e10: 0
     e11: 360
     e12: 0
-    e13: -1.3980583
+    e13: 0
     e20: 0
     e21: 0
     e22: 360
@@ -895,7 +895,7 @@ MonoBehaviour:
     e10: 0
     e11: 360
     e12: 0
-    e13: -1.3980583
+    e13: 0
     e20: 0
     e21: 0
     e22: 360
@@ -3338,7 +3338,7 @@ MonoBehaviour:
     e10: 0
     e11: 360
     e12: 0
-    e13: -1.3980583
+    e13: 0
     e20: 0
     e21: 0
     e22: 360
@@ -3636,7 +3636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DebPosition: {fileID: 233545687}
   DebLastPos: {fileID: 1129477565}
-  inputMode: 2
+  inputMode: 1
 --- !u!114 &1063532351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4083,8 +4083,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d44bc69c2ca5f943b845318866dc1bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 0}
-  trigger: 0
+  audioClip: {fileID: 8300000, guid: 2da54b6e8c740a44a9fd07006c42cdb2, type: 3}
+  trigger: 3
   volume: 1
   pitch: 1
 --- !u!114 &1234725378
@@ -4655,8 +4655,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d44bc69c2ca5f943b845318866dc1bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 0}
-  trigger: 0
+  audioClip: {fileID: 8300000, guid: 2da54b6e8c740a44a9fd07006c42cdb2, type: 3}
+  trigger: 3
   volume: 1
   pitch: 1
 --- !u!114 &1390499542
@@ -5000,7 +5000,7 @@ MonoBehaviour:
     e10: 0
     e11: 360
     e12: 0
-    e13: -1.3980583
+    e13: 0
     e20: 0
     e21: 0
     e22: 360
@@ -6482,7 +6482,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2084598761}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.0219726562, y: 1.3980583, z: 0}
+  m_LocalPosition: {x: -.0219726562, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1526832222}

@@ -86,7 +86,7 @@ public class FiringManager : MonoBehaviour
         if (max != BulletMax)
         {
             sliders[max].sliderValue = (modulo/chargeTime);
-            Debug.Log(modulo);
+            
         }
 
         //空

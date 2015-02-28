@@ -17,6 +17,9 @@ public class GameController : MonoBehaviour
 		Playing,
 		GameOver,
 	}
+	AdsSingleton ads;
+
+	bool adsFlag = false;
 
 	ScreenFader screenFader;
 	
@@ -57,6 +60,9 @@ public class GameController : MonoBehaviour
 
 	void Awake()
 	{
+		ads = AdsSingleton.GetInstance;
+		//ads = AdsSingleton.GetInstance;
+
 		titlePanel = GameObject.FindWithTag(Tags.UITitlePanel).GetComponent<NGUIPanel>();
 		radyPanel = GameObject.FindWithTag(Tags.UIRadyPanel).GetComponent<NGUIPanel>();
 		playPanel = GameObject.FindWithTag(Tags.UIPlayPanel).GetComponent<NGUIPanel>();
@@ -153,6 +159,12 @@ public class GameController : MonoBehaviour
 
 	void OnGameOver()
 	{
+		if (adsFlag == false)
+		{
+			adsFlag = true;
+			ads.Show();
+		}
+
 		if (screenFader.Color == Color.black)
 		{
 			Application.LoadLevel("mainScene");

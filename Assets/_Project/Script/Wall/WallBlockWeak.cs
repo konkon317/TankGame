@@ -5,6 +5,11 @@ public class WallBlockWeak : MonoBehaviour {
 
     public GameObject DetonatorPrefab;
 
+	void Awake()
+	{
+		
+	}
+
 	// Use this for initialization
 	void Start () 
     {
@@ -31,7 +36,6 @@ public class WallBlockWeak : MonoBehaviour {
         detonator.transform.position = this.transform.position;
 
 		detonator.transform.parent = GameObject.FindWithTag(Tags.DetonatorParent).transform;
-
-       
+		      
     }
 }

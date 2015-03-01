@@ -10,6 +10,7 @@ public class TankMuzzle : MonoBehaviour
 
     FiringManager firingManager;
 
+	[SerializeField]
     AudioSource fireSe;
 
 	float point;
@@ -24,7 +25,7 @@ public class TankMuzzle : MonoBehaviour
         firingManager = GameObject.FindWithTag(Tags.GameController).GetComponent<FiringManager>();
 
 		bulletPrefab = Resources.Load<GameObject>(ResourcesPath.Prefab_Bullet);
-        fireSe = GetComponent<AudioSource>();
+        //fireSe = GetComponent<AudioSource>();
 
 		bulletsParent = GameObject.FindWithTag(Tags.BulletsParent).transform;
 		tank = this.GetComponentInParent<Tank>();

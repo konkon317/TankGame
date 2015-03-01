@@ -9,8 +9,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 425572}
   - 114: {fileID: 11425572}
-  - 114: {fileID: 11449984}
   - 81: {fileID: 8100008}
+  - 114: {fileID: 11468340}
+  - 114: {fileID: 11449984}
   m_Layer: 0
   m_Name: Detonator_WeakBlock
   m_TagString: Untagged
@@ -75,7 +76,7 @@ MonoBehaviour:
   autoCreateHeatwave: 0
 --- !u!114 &11449984
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 125572}
@@ -111,6 +112,45 @@ MonoBehaviour:
   distanceThreshold: 1500
   minVolume: .400000006
   maxVolume: 10
+  rolloffFactor: .5
+--- !u!114 &11468340
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 125572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2b0ca7171ed55c4eaaf9aba39d05e87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  on: 1
+  detonatorControlled: 1
+  startSize: 1
+  size: 1
+  explodeDelayMin: 0
+  explodeDelayMax: 0
+  startDuration: 2
+  duration: 2
+  timeScale: 1
+  startDetail: 1
+  detail: 1
+  startColor: {r: 1, g: 1, b: 1, a: 1}
+  color: {r: 1, g: 1, b: 1, a: 1}
+  startLocalPosition: {x: 0, y: 0, z: 0}
+  localPosition: {x: 0, y: 0, z: 0}
+  startForce: {x: 0, y: 0, z: 0}
+  force: {x: 0, y: 0, z: 0}
+  startVelocity: {x: 0, y: 0, z: 0}
+  velocity: {x: 0, y: 0, z: 0}
+  detailThreshold: 0
+  nearSounds:
+  - {fileID: 8300000, guid: d7cc205ee75b4403f9af97b1435bef0e, type: 3}
+  farSounds:
+  - {fileID: 8300000, guid: d7cc205ee75b4403f9af97b1435bef0e, type: 3}
+  distanceThreshold: 50
+  minVolume: .400000006
+  maxVolume: 1
   rolloffFactor: .5
 --- !u!1001 &100100000
 Prefab:

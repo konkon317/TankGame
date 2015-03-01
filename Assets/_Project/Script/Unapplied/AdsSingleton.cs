@@ -33,6 +33,7 @@ class AdsSingleton
 		Debug.Log("adsInitialize");
 		counter = 2;
         Advertisement.Initialize(ios,true);
+		
 	}
 
 	public void Show()

@@ -21,6 +21,10 @@ public class GameController : MonoBehaviour
 
 	bool adsFlag = false;
 
+	public bool IsTutorial { get { return isTutorial; } }
+	[SerializeField]
+	bool isTutorial = false;
+
 	ScreenFader screenFader;
 	
 	//状態が切り替わった際に実行する関数をリスト
@@ -29,6 +33,7 @@ public class GameController : MonoBehaviour
 	FuncDelegateList setUpFunctions_Rady=new FuncDelegateList();
 	FuncDelegateList setUpFunctions_Play=new FuncDelegateList();
 	FuncDelegateList setUpFunctions_GameOver=new FuncDelegateList();
+	FuncDelegateList setUpFunctions_Tutorial = new FuncDelegateList();
 
 	/// <summary>
 	/// シーンのりロードの際リセットされない（されてはいけない）データ
@@ -76,13 +81,16 @@ public class GameController : MonoBehaviour
 		}
 		gameData = GameDataSingleton.Instance;
 
-		sequence = gameData.StartSeq;
-
-
 		InitializeDelegateLists();
 		InitializeButtonDelegate();
 
 		screenFader.SetStateBlack();
+
+		if(isTutorial)
+		{
+			sequence = GameSequence.Restart;
+		}
+
 	}
 
 	void Start()
@@ -103,10 +111,6 @@ public class GameController : MonoBehaviour
 
 	void Update()
 	{
-		/*if (Input.GetKeyDown(KeyCode.Return))
-		{
-			
-		}*/
 
 		switch (Sequence)
 		{ 
@@ -168,9 +172,9 @@ public class GameController : MonoBehaviour
 		if (screenFader.Color == Color.black)
 		{
 			Application.LoadLevel("mainScene");
-		}
-		
+		}	
 	}
+
 
 	void ToTitleWithLoad()
 	{
@@ -310,7 +314,6 @@ public class GameController : MonoBehaviour
 		//ゲームオーバーになった際に実行する関数
 		SetDelegateSetUpFunc_GameOver(playPanel.SetStateFadeOut);
 		SetDelegateSetUpFunc_GameOver(gameOverPanel.SetStateFadeIn);
-		 	
 	}
 
 	void InitializeButtonDelegate()

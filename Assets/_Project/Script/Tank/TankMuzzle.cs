@@ -10,7 +10,7 @@ public class TankMuzzle : MonoBehaviour
 
     FiringManager firingManager;
 
-	AudioClip fire_SE;
+    AudioSource fireSe;
 
 	float point;
 
@@ -24,7 +24,7 @@ public class TankMuzzle : MonoBehaviour
         firingManager = GameObject.FindWithTag(Tags.GameController).GetComponent<FiringManager>();
 
 		bulletPrefab = Resources.Load<GameObject>(ResourcesPath.Prefab_Bullet);
-		fire_SE = Resources.Load<AudioClip>(ResourcesPath.SE_Fire);
+        fireSe = GetComponent<AudioSource>();
 
 		bulletsParent = GameObject.FindWithTag(Tags.BulletsParent).transform;
 		tank = this.GetComponentInParent<Tank>();
@@ -53,6 +53,7 @@ public class TankMuzzle : MonoBehaviour
         if(firingManager.CanFire())
         {
             firingManager.OnFire();
+            fireSe.Play();
 
             GameObject obj = (GameObject)Instantiate(bulletPrefab);	//プリファブからクローンを作成
             obj.transform.position = transform.position;			//位置の設定
@@ -70,7 +71,7 @@ public class TankMuzzle : MonoBehaviour
             //（ヒエラルキービューを見やすくするために）
             obj.transform.parent = bulletsParent;
 
-			AudioSource.PlayClipAtPoint(fire_SE, this.transform.position);
+
         }
 	}
 }

@@ -22,6 +22,9 @@ class AdsSingleton
 	}
 	static AdsSingleton instance;
 
+    const string android="23974";
+    const string ios="23981";
+
 	int counter;
 
 
@@ -29,7 +32,7 @@ class AdsSingleton
 	{
 		Debug.Log("adsInitialize");
 		counter = 2;
-		Advertisement.Initialize("23974",true);
+        Advertisement.Initialize(ios,true);
 	}
 
 	public void Show()

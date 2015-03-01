@@ -4,7 +4,7 @@ using System.Collections;
 public class ResourcesPath : MonoBehaviour 
 {
 	//AudioCrip
-	public const string SE_Fire = "Sound/SE/fire_se";
+    public const string SE_Fire = "Sound/SE/shot";
 	public const string SE_Crash = "Sound/Se/crash_se";
 
 	//Prefab

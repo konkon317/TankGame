@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 425572}
   - 114: {fileID: 11425572}
   - 114: {fileID: 11449984}
+  - 81: {fileID: 8100008}
   m_Layer: 0
   m_Name: Detonator_WeakBlock
   m_TagString: Untagged
@@ -29,6 +30,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!81 &8100008
+AudioListener:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 125572}
+  m_Enabled: 1
 --- !u!114 &11425572
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -79,7 +87,7 @@ MonoBehaviour:
   on: 1
   detonatorControlled: 1
   startSize: 1
-  size: 1
+  size: 50
   explodeDelayMin: 0
   explodeDelayMax: 0
   startDuration: 2
@@ -92,17 +100,17 @@ MonoBehaviour:
   startLocalPosition: {x: 0, y: 0, z: 0}
   localPosition: {x: 0, y: 0, z: 0}
   startForce: {x: 0, y: 0, z: 0}
-  force: {x: 0, y: 0, z: 0}
+  force: {x: 1000, y: 1000, z: 1000}
   startVelocity: {x: 0, y: 0, z: 0}
   velocity: {x: 0, y: 0, z: 0}
   detailThreshold: 0
   nearSounds:
-  - {fileID: 8300000, guid: 4e99d8ad81c13704bbc605403ac0a36b, type: 3}
+  - {fileID: 8300000, guid: d7cc205ee75b4403f9af97b1435bef0e, type: 3}
   farSounds:
-  - {fileID: 8300000, guid: 4e99d8ad81c13704bbc605403ac0a36b, type: 3}
-  distanceThreshold: 50
+  - {fileID: 8300000, guid: d7cc205ee75b4403f9af97b1435bef0e, type: 3}
+  distanceThreshold: 1500
   minVolume: .400000006
-  maxVolume: 1
+  maxVolume: 10
   rolloffFactor: .5
 --- !u!1001 &100100000
 Prefab:

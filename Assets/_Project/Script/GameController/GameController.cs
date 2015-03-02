@@ -90,6 +90,7 @@ public class GameController : MonoBehaviour
 		InitializeButtonDelegate();
 
 		screenFader.SetStateBlack();
+		sequence = gameData.StartSeq;
 
 		if(isTutorial)
 		{

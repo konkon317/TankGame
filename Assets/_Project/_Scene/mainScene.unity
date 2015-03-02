@@ -455,17 +455,17 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 285
+    e00: 360
     e01: 0
     e02: 0
-    e03: -285000.5
+    e03: -359998.75
     e10: 0
-    e11: 285
+    e11: 360
     e12: 0
-    e13: 0
+    e13: -.631578982
     e20: 0
     e21: 0
-    e22: 285
+    e22: 360
     e23: 0
     e30: 0
     e31: 0
@@ -888,17 +888,17 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 285
+    e00: 360
     e01: 0
     e02: 0
-    e03: -285000.5
+    e03: -359998.75
     e10: 0
-    e11: 285
+    e11: 360
     e12: 0
-    e13: 0
+    e13: -.631578982
     e20: 0
     e21: 0
-    e22: 285
+    e22: 360
     e23: 0
     e30: 0
     e31: 0
@@ -3511,17 +3511,17 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 285
+    e00: 360
     e01: 0
     e02: 0
-    e03: -285000.5
+    e03: -359998.75
     e10: 0
-    e11: 285
+    e11: 360
     e12: 0
-    e13: 0
+    e13: -.631578982
     e20: 0
     e21: 0
-    e22: 285
+    e22: 360
     e23: 0
     e30: 0
     e31: 0
@@ -3818,7 +3818,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DebPosition: {fileID: 233545687}
   DebLastPos: {fileID: 1129477565}
-  inputMode: 0
+  inputMode: 1
 --- !u!114 &1063532351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3962,7 +3962,7 @@ Transform:
   m_GameObject: {fileID: 1068701711}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1000, y: 0, z: 0}
-  m_LocalScale: {x: .003508772, y: .003508772, z: .003508772}
+  m_LocalScale: {x: .00277777785, y: .00277777785, z: .00277777785}
   m_Children:
   - {fileID: 1001691433}
   m_Father: {fileID: 0}
@@ -3985,17 +3985,17 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 285
+    e00: 360
     e01: 0
     e02: 0
-    e03: -285000
+    e03: -360000
     e10: 0
-    e11: 285
+    e11: 360
     e12: 0
     e13: 0
     e20: 0
     e21: 0
-    e22: 285
+    e22: 360
     e23: 0
     e30: 0
     e31: 0
@@ -5232,17 +5232,17 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 285
+    e00: 360
     e01: 0
     e02: 0
-    e03: -285000.5
+    e03: -359998.75
     e10: 0
-    e11: 285
+    e11: 360
     e12: 0
-    e13: 0
+    e13: -.631578982
     e20: 0
     e21: 0
-    e22: 285
+    e22: 360
     e23: 0
     e30: 0
     e31: 0
@@ -6866,7 +6866,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2084598761}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .504455566, y: 0, z: 0}
+  m_LocalPosition: {x: -1.25244141, y: .631578982, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1526832222}

@@ -85,10 +85,10 @@ public class Tank : MonoBehaviour
 			//barrelSupport.ChangeAngle(burrelAngleSlider.sliderValue);
 			barrelSupport.ChangeAngle(barrelAngle);
 
-			if (Input.GetKeyDown(KeyCode.Return))
+		/*	if (Input.GetKeyDown(KeyCode.Return))
 			{
 				muzzle.Fire();
-			}
+			}*/
 		}
 	}
 

@@ -16,6 +16,7 @@ public class GameController : MonoBehaviour
 		Rady,
 		Playing,
 		GameOver,
+		ToTutorial,
 	}
 	AdsSingleton ads;
 
@@ -35,6 +36,7 @@ public class GameController : MonoBehaviour
 	FuncDelegateList setUpFunctions_GameOver=new FuncDelegateList();
 	FuncDelegateList setUpFunctions_Tutorial = new FuncDelegateList();
 
+
 	/// <summary>
 	/// シーンのりロードの際リセットされない（されてはいけない）データ
 	/// </summary>
@@ -46,6 +48,8 @@ public class GameController : MonoBehaviour
 	NGUIButton GoTitleButton;
 	[SerializeField]
 	NGUIButton RestartButton;
+	[SerializeField]
+	NGUIButton GoTutorialButton;
 
 	//各UIパネルのオンオフをサポートします
 	NGUIPanel titlePanel;
@@ -62,6 +66,7 @@ public class GameController : MonoBehaviour
 	GameSequence sequence;
 
 	bool gameOverflag=false;
+	
 
 	void Awake()
 	{
@@ -111,7 +116,6 @@ public class GameController : MonoBehaviour
 
 	void Update()
 	{
-
 		switch (Sequence)
 		{ 
 			case GameSequence.Title:
@@ -128,6 +132,9 @@ public class GameController : MonoBehaviour
 				break;
 			case GameSequence.GameOver:
 				OnGameOver();
+				break;
+			case GameSequence.ToTutorial:
+				OnGoToTutrial();
 				break;
 		}
 	}
@@ -163,15 +170,27 @@ public class GameController : MonoBehaviour
 
 	void OnGameOver()
 	{
-		if (adsFlag == false)
+		if (!IsTutorial)
 		{
-			adsFlag = true;
-			ads.Show();
+			if (adsFlag == false)
+			{
+				adsFlag = true;
+				ads.Show();
+			}
 		}
 
 		if (screenFader.Color == Color.black)
 		{
 			Application.LoadLevel("mainScene");
+		}	
+	}
+
+	void OnGoToTutrial()
+	{
+		
+		if (screenFader.Color == Color.black)
+		{
+			Application.LoadLevel("Tutorial");
 		}	
 	}
 
@@ -198,6 +217,14 @@ public class GameController : MonoBehaviour
 
 			gameData.SetStartSeq(GameSequence.Restart);
 		}
+	}
+
+	void ToTutrialWithLoad()
+	{
+		Debug.Log("button");
+		screenFader.SetStateFadeToBlack();	
+		GameStartButton.enabled = false;
+		SetSequence(GameSequence.ToTutorial);
 	}
 
 	void SetSequence(GameSequence targetSeq)
@@ -318,11 +345,15 @@ public class GameController : MonoBehaviour
 
 	void InitializeButtonDelegate()
 	{
-		GameStartButton.SetDelegate_OnPressFunction(titlePanel.SetStateFadeOut);
+		GameStartButton.SetDelegate_OnClickFunction(titlePanel.SetStateFadeOut);
 
-		GoTitleButton.SetDelegate_OnPressFunction(this.ToTitleWithLoad);
-		RestartButton.SetDelegate_OnPressFunction(this.ToRestartWithLoad);
+		GoTitleButton.SetDelegate_OnClickFunction(this.ToTitleWithLoad);
+		RestartButton.SetDelegate_OnClickFunction(this.ToRestartWithLoad);
 
+		if (!isTutorial)
+		{
+			GoTutorialButton.SetDelegate_OnClickFunction(this.ToTutrialWithLoad);
+		}
 	}
 
 	

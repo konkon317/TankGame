@@ -32,7 +32,7 @@ class AdsSingleton
 	{
 		Debug.Log("adsInitialize");
 		counter = 2;
-        Advertisement.Initialize(ios,true);
+        Advertisement.Initialize(android,true);
 		
 	}
 

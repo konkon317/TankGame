@@ -9,7 +9,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 425572}
   - 114: {fileID: 11425572}
-  - 81: {fileID: 8100008}
   - 114: {fileID: 11468340}
   - 114: {fileID: 11449984}
   m_Layer: 0
@@ -31,13 +30,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!81 &8100008
-AudioListener:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 125572}
-  m_Enabled: 1
 --- !u!114 &11425572
 MonoBehaviour:
   m_ObjectHideFlags: 1

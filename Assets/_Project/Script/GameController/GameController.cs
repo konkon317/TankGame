@@ -152,7 +152,7 @@ public class GameController : MonoBehaviour
 	{
 		if (screenFader.Color == Color.clear)
 		{
-			SetSequence(GameSequence.Playing);
+			SetSequence(GameSequence.Rady);
 		}
 	}
 

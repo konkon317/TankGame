@@ -455,17 +455,17 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 360
+    e00: 384.5
     e01: 0
     e02: 0
-    e03: -360000.031
+    e03: -384498.031
     e10: 0
-    e11: 360
+    e11: 384.5
     e12: 0
     e13: 0
     e20: 0
     e21: 0
-    e22: 360
+    e22: 384.5
     e23: 0
     e30: 0
     e31: 0
@@ -888,17 +888,17 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 360
+    e00: 384.5
     e01: 0
     e02: 0
-    e03: -360000.031
+    e03: -384498.031
     e10: 0
-    e11: 360
+    e11: 384.5
     e12: 0
     e13: 0
     e20: 0
     e21: 0
-    e22: 360
+    e22: 384.5
     e23: 0
     e30: 0
     e31: 0
@@ -3501,17 +3501,17 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 360
+    e00: 384.5
     e01: 0
     e02: 0
-    e03: -360000.031
+    e03: -384498.031
     e10: 0
-    e11: 360
+    e11: 384.5
     e12: 0
     e13: 0
     e20: 0
     e21: 0
-    e22: 360
+    e22: 384.5
     e23: 0
     e30: 0
     e31: 0
@@ -3942,7 +3942,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scalingStyle: 1
   automatic: 0
-  manualHeight: 720
+  manualHeight: 768
   minimumHeight: 1
   maximumHeight: 2147483647
 --- !u!4 &1068701713
@@ -3953,7 +3953,7 @@ Transform:
   m_GameObject: {fileID: 1068701711}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1000, y: 0, z: 0}
-  m_LocalScale: {x: .00277777785, y: .00277777785, z: .00277777785}
+  m_LocalScale: {x: .00260078022, y: .00260078022, z: .00260078022}
   m_Children:
   - {fileID: 1001691433}
   m_Father: {fileID: 0}
@@ -3976,17 +3976,17 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 360
+    e00: 384.5
     e01: 0
     e02: 0
-    e03: -360000
+    e03: -384500
     e10: 0
-    e11: 360
+    e11: 384.5
     e12: 0
     e13: 0
     e20: 0
     e21: 0
-    e22: 360
+    e22: 384.5
     e23: 0
     e30: 0
     e31: 0
@@ -5231,17 +5231,17 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 360
+    e00: 384.5
     e01: 0
     e02: 0
-    e03: -360000.031
+    e03: -384498.031
     e10: 0
-    e11: 360
+    e11: 384.5
     e12: 0
     e13: 0
     e20: 0
     e21: 0
-    e22: 360
+    e22: 384.5
     e23: 0
     e30: 0
     e31: 0
@@ -5516,7 +5516,7 @@ MonoBehaviour:
   mPivot: 4
   mDepth: 3
   mFont: {fileID: 11467464, guid: 99346508e58547f438629573a51a60b3, type: 2}
-  mText: Game Is Over
+  mText: Game Over
   mMaxLineWidth: 0
   mMaxLineHeight: 0
   mEncoding: 1
@@ -6991,7 +6991,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2084598761}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .0219726562, y: 0, z: 0}
+  m_LocalPosition: {x: -1.97131348, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1526832222}

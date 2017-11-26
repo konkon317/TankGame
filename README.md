@@ -6,7 +6,11 @@ unityで制作
 企画 M.M君  
 3Dモデル S君  
 プログラムなど 私  
+
+//使用したアセット  
+Detonator Explosion Framework  
+https://www.assetstore.unity3d.com/jp/#!/content/1  
   
-アセットストアのフリーアセットいくつか使用  
-詳細は調べなおして書く予定  
+NGUI フリーバージョン  
+http://www.tasharen.com/?page_id=140  
 
